@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Sun Dec 22 12:16:59 2024
+# Process ID: 5556
+# Current directory: D:/Projects/prj/AMD/image_processing/image_processing.runs/top_bd_auto_pc_1_synth_1
+# Command line: vivado.exe -log top_bd_auto_pc_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_bd_auto_pc_1.tcl
+# Log file: D:/Projects/prj/AMD/image_processing/image_processing.runs/top_bd_auto_pc_1_synth_1/top_bd_auto_pc_1.vds
+# Journal file: D:/Projects/prj/AMD/image_processing/image_processing.runs/top_bd_auto_pc_1_synth_1\vivado.jou
+# Running On: C88, OS: Windows, CPU Frequency: 3793 MHz, CPU Physical cores: 16, Host memory: 33618 MB
+#-----------------------------------------------------------
+source top_bd_auto_pc_1.tcl -notrace

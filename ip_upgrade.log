@@ -1,0 +1,16 @@
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (win64) Build 3788238 Tue Feb 21 20:00:34 MST 2023
+| Date         : Tue Dec 10 10:29:10 2024
+| Host         : C88 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'bd_1_rgb2dvi_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of bd_1_rgb2dvi_0_1 (digilentinc.com:ip:rgb2dvi:1.4) from (Rev. 8) to (Rev. 9)
+

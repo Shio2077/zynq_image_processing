@@ -1,0 +1,12 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Debugger_display_demo-Default_1,org.eclipse.launchbar.core.descriptorType.default\:Debugger_display_demo-Default
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_app_zynq7_lcd-Default/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_app_zynq7_lcd-Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_display_demo-Default/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_display_demo-Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_display_demo-Default_1/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_app_zynq7_lcd_system/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_app_zynq7_lcd_system/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description: 
+// Description:  process image with some thsershold
 // 
 // Dependencies: 
 // 

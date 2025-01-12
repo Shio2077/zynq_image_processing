@@ -1,7 +1,7 @@
 //Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2.2 (win64) Build 3788238 Tue Feb 21 20:00:34 MST 2023
-//Date        : Sun Dec 22 12:16:32 2024
+//Date        : Sun Jan 12 20:19:04 2025
 //Host        : C88 running 64-bit major release  (build 9200)
 //Command     : generate_target top_bd.bd
 //Design      : top_bd
@@ -462,7 +462,7 @@ module s00_couplers_imp_TL7I3Q
         .s_axi_wvalid(s00_couplers_to_auto_pc_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "top_bd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_bd,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=16,numReposBlks=12,numNonXlnxBlks=1,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=6,da_clkrst_cnt=14,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_bd.hwdef" *) 
+(* CORE_GENERATION_INFO = "top_bd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_bd,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=17,numReposBlks=13,numNonXlnxBlks=1,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=6,da_clkrst_cnt=14,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_bd.hwdef" *) 
 module top_bd
    (DDR_addr,
     DDR_ba,
@@ -649,6 +649,9 @@ module top_bd
   wire v_tc_0_vtiming_out_HSYNC;
   wire v_tc_0_vtiming_out_VBLANK;
   wire v_tc_0_vtiming_out_VSYNC;
+  wire [7:0]vio_0_probe_out0;
+  wire [7:0]vio_0_probe_out1;
+  wire [7:0]vio_0_probe_out2;
   wire [0:0]xlconstant_0_dout;
 
   assign TMDS_0_tmds_clk_n = DVI_Transmitter_0_TMDS_tmds_clk_n;
@@ -750,6 +753,9 @@ module top_bd
   top_bd_image_process_0_0 image_process_0
        (.aclk(processing_system7_0_FCLK_CLK0),
         .areset_n(rst_ps7_0_100M_peripheral_aresetn),
+        .th_b(vio_0_probe_out2),
+        .th_g(vio_0_probe_out1),
+        .th_r(vio_0_probe_out0),
         .video_stream_tdata_i(axi_vdma_0_m_axis_mm2s_tdata),
         .video_stream_tdata_o(image_process_0_video_stream_tdata_o),
         .video_stream_tlast_i(axi_vdma_0_m_axis_mm2s_tlast),
@@ -964,6 +970,11 @@ module top_bd
         .sof_state(1'b0),
         .vblank_out(v_tc_0_vtiming_out_VBLANK),
         .vsync_out(v_tc_0_vtiming_out_VSYNC));
+  top_bd_vio_0_0 vio_0
+       (.clk(processing_system7_0_FCLK_CLK0),
+        .probe_out0(vio_0_probe_out0),
+        .probe_out1(vio_0_probe_out1),
+        .probe_out2(vio_0_probe_out2));
   top_bd_xlconstant_0_0 xlconstant_0
        (.dout(xlconstant_0_dout));
 endmodule

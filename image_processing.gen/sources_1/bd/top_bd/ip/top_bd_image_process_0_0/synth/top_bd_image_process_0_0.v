@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2024 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2025 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -67,7 +67,10 @@ module top_bd_image_process_0_0 (
   video_stream_tvalid_o,
   video_stream_tuser_o,
   video_stream_tlast_o,
-  video_stream_tready_i
+  video_stream_tready_i,
+  th_r,
+  th_g,
+  th_b
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aclk, ASSOCIATED_BUSIF video_stream_i:video_stream_o, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_bd_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
@@ -96,6 +99,9 @@ output wire video_stream_tlast_o;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME video_stream_i, TDATA_NUM_BYTES 3, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_bd_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 video_stream_i TREADY" *)
 input wire video_stream_tready_i;
+input wire [7 : 0] th_r;
+input wire [7 : 0] th_g;
+input wire [7 : 0] th_b;
 
   image_process inst (
     .aclk(aclk),
@@ -109,6 +115,9 @@ input wire video_stream_tready_i;
     .video_stream_tvalid_o(video_stream_tvalid_o),
     .video_stream_tuser_o(video_stream_tuser_o),
     .video_stream_tlast_o(video_stream_tlast_o),
-    .video_stream_tready_i(video_stream_tready_i)
+    .video_stream_tready_i(video_stream_tready_i),
+    .th_r(th_r),
+    .th_g(th_g),
+    .th_b(th_b)
   );
 endmodule

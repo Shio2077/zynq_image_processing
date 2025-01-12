@@ -1,7 +1,7 @@
 // Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2.2 (win64) Build 3788238 Tue Feb 21 20:00:34 MST 2023
-// Date        : Sun Dec 22 12:18:28 2024
+// Date        : Sun Jan 12 20:19:48 2025
 // Host        : C88 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ip/top_bd_image_process_0_0/top_bd_image_process_0_0_stub.v
@@ -17,8 +17,8 @@
 module top_bd_image_process_0_0(aclk, areset_n, video_stream_tdata_i, 
   video_stream_tvalid_i, video_stream_tuser_i, video_stream_tlast_i, 
   video_stream_tready_o, video_stream_tdata_o, video_stream_tvalid_o, 
-  video_stream_tuser_o, video_stream_tlast_o, video_stream_tready_i)
-/* synthesis syn_black_box black_box_pad_pin="aclk,areset_n,video_stream_tdata_i[23:0],video_stream_tvalid_i,video_stream_tuser_i,video_stream_tlast_i,video_stream_tready_o,video_stream_tdata_o[23:0],video_stream_tvalid_o,video_stream_tuser_o,video_stream_tlast_o,video_stream_tready_i" */;
+  video_stream_tuser_o, video_stream_tlast_o, video_stream_tready_i, th_r, th_g, th_b)
+/* synthesis syn_black_box black_box_pad_pin="aclk,areset_n,video_stream_tdata_i[23:0],video_stream_tvalid_i,video_stream_tuser_i,video_stream_tlast_i,video_stream_tready_o,video_stream_tdata_o[23:0],video_stream_tvalid_o,video_stream_tuser_o,video_stream_tlast_o,video_stream_tready_i,th_r[7:0],th_g[7:0],th_b[7:0]" */;
   input aclk;
   input areset_n;
   input [23:0]video_stream_tdata_i;
@@ -31,4 +31,7 @@ module top_bd_image_process_0_0(aclk, areset_n, video_stream_tdata_i,
   output video_stream_tuser_o;
   output video_stream_tlast_o;
   input video_stream_tready_i;
+  input [7:0]th_r;
+  input [7:0]th_g;
+  input [7:0]th_b;
 endmodule

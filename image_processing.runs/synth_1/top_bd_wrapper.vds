@@ -2,8 +2,8 @@
 # Vivado v2022.2.2 (64-bit)
 # SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
 # IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
-# Start of session at: Sun Dec 22 12:19:01 2024
-# Process ID: 1560
+# Start of session at: Sun Jan 12 20:19:55 2025
+# Process ID: 7268
 # Current directory: D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1
 # Command line: vivado.exe -log top_bd_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_bd_wrapper.tcl
 # Log file: D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/top_bd_wrapper.vds
@@ -28,88 +28,92 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 6356
+INFO: [Synth 8-7075] Helper process launched with PID 11060
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/AMD/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2406.234 ; gain = 409.062
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2412.945 ; gain = 409.613
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_bd_wrapper' [D:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/hdl/top_bd_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'top_bd' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:465]
-INFO: [Synth 8-6157] synthesizing module 'top_bd_DVI_Transmitter_0_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_DVI_Transmitter_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_bd_DVI_Transmitter_0_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_DVI_Transmitter_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'tmds_oen' of module 'top_bd_DVI_Transmitter_0_0' is unconnected for instance 'DVI_Transmitter_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:658]
-WARNING: [Synth 8-7023] instance 'DVI_Transmitter_0' of module 'top_bd_DVI_Transmitter_0_0' has 12 connections declared, but only 11 given [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:658]
-INFO: [Synth 8-6157] synthesizing module 'top_bd_axi_mem_intercon_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:971]
+INFO: [Synth 8-6157] synthesizing module 'top_bd_DVI_Transmitter_0_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_DVI_Transmitter_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_bd_DVI_Transmitter_0_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_DVI_Transmitter_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'tmds_oen' of module 'top_bd_DVI_Transmitter_0_0' is unconnected for instance 'DVI_Transmitter_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:661]
+WARNING: [Synth 8-7023] instance 'DVI_Transmitter_0' of module 'top_bd_DVI_Transmitter_0_0' has 12 connections declared, but only 11 given [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:661]
+INFO: [Synth 8-6157] synthesizing module 'top_bd_axi_mem_intercon_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:982]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_HDYSKV' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:12]
-INFO: [Synth 8-6157] synthesizing module 'top_bd_auto_pc_1' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_auto_pc_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_bd_auto_pc_1' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_bd_auto_pc_1' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_bd_auto_pc_1' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_auto_pc_1_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_HDYSKV' (0#1) [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'top_bd_axi_mem_intercon_0' (0#1) [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:971]
-INFO: [Synth 8-6157] synthesizing module 'top_bd_axi_vdma_0_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_axi_vdma_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_bd_axi_vdma_0_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_axi_vdma_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'mm2s_frame_ptr_out' of module 'top_bd_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:705]
-WARNING: [Synth 8-7071] port 'm_axis_mm2s_tkeep' of module 'top_bd_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:705]
-WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'top_bd_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:705]
-WARNING: [Synth 8-7023] instance 'axi_vdma_0' of module 'top_bd_axi_vdma_0_0' has 42 connections declared, but only 39 given [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:705]
-INFO: [Synth 8-6157] synthesizing module 'top_bd_clk_wiz_0_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_bd_clk_wiz_0_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_bd_image_process_0_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_image_process_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_bd_image_process_0_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_image_process_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_bd_processing_system7_0_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_processing_system7_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_bd_processing_system7_0_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_processing_system7_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_AWREADY' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:763]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_BVALID' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:763]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WREADY' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:763]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_BRESP' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:763]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_BID' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:763]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RID' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:763]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:763]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:763]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:763]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:763]
-WARNING: [Synth 8-7071] port 'FCLK_CLK1' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:763]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'top_bd_processing_system7_0_0' has 108 connections declared, but only 97 given [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:763]
-INFO: [Synth 8-6157] synthesizing module 'top_bd_ps7_0_axi_periph_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:1141]
+INFO: [Synth 8-6155] done synthesizing module 'top_bd_axi_mem_intercon_0' (0#1) [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:982]
+INFO: [Synth 8-6157] synthesizing module 'top_bd_axi_vdma_0_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_axi_vdma_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_bd_axi_vdma_0_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_axi_vdma_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mm2s_frame_ptr_out' of module 'top_bd_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:708]
+WARNING: [Synth 8-7071] port 'm_axis_mm2s_tkeep' of module 'top_bd_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:708]
+WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'top_bd_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:708]
+WARNING: [Synth 8-7023] instance 'axi_vdma_0' of module 'top_bd_axi_vdma_0_0' has 42 connections declared, but only 39 given [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:708]
+INFO: [Synth 8-6157] synthesizing module 'top_bd_clk_wiz_0_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_bd_clk_wiz_0_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_bd_image_process_0_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_image_process_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_bd_image_process_0_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_image_process_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_bd_processing_system7_0_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_processing_system7_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_bd_processing_system7_0_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_processing_system7_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_AWREADY' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:769]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_BVALID' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:769]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WREADY' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:769]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_BRESP' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:769]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_BID' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:769]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RID' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:769]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:769]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:769]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:769]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:769]
+WARNING: [Synth 8-7071] port 'FCLK_CLK1' of module 'top_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:769]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'top_bd_processing_system7_0_0' has 108 connections declared, but only 97 given [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:769]
+INFO: [Synth 8-6157] synthesizing module 'top_bd_ps7_0_axi_periph_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:1152]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_TL7I3Q' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:175]
-INFO: [Synth 8-6157] synthesizing module 'top_bd_auto_pc_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_auto_pc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_bd_auto_pc_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_bd_auto_pc_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_bd_auto_pc_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_auto_pc_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'top_bd_auto_pc_0' is unconnected for instance 'auto_pc' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:406]
 WARNING: [Synth 8-7071] port 'm_axi_wstrb' of module 'top_bd_auto_pc_0' is unconnected for instance 'auto_pc' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:406]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'top_bd_auto_pc_0' is unconnected for instance 'auto_pc' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:406]
 WARNING: [Synth 8-7023] instance 'auto_pc' of module 'top_bd_auto_pc_0' has 59 connections declared, but only 56 given [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:406]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_TL7I3Q' (0#1) [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:175]
-INFO: [Synth 8-6155] done synthesizing module 'top_bd_ps7_0_axi_periph_0' (0#1) [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:1141]
-INFO: [Synth 8-6157] synthesizing module 'top_bd_rst_ps7_0_100M_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_rst_ps7_0_100M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_bd_rst_ps7_0_100M_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_rst_ps7_0_100M_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'top_bd_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:922]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'top_bd_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:922]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'top_bd_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:922]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'top_bd_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:922]
-WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'top_bd_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:922]
-INFO: [Synth 8-6157] synthesizing module 'top_bd_util_vector_logic_0_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_util_vector_logic_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_bd_util_vector_logic_0_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_util_vector_logic_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_bd_v_axi4s_vid_out_0_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_v_axi4s_vid_out_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_bd_v_axi4s_vid_out_0_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_v_axi4s_vid_out_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'vid_vblank' of module 'top_bd_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:932]
-WARNING: [Synth 8-7071] port 'vid_hblank' of module 'top_bd_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:932]
-WARNING: [Synth 8-7071] port 'vid_field_id' of module 'top_bd_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:932]
-WARNING: [Synth 8-7071] port 'locked' of module 'top_bd_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:932]
-WARNING: [Synth 8-7071] port 'overflow' of module 'top_bd_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:932]
-WARNING: [Synth 8-7071] port 'underflow' of module 'top_bd_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:932]
-WARNING: [Synth 8-7071] port 'fifo_read_level' of module 'top_bd_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:932]
-WARNING: [Synth 8-7071] port 'status' of module 'top_bd_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:932]
-WARNING: [Synth 8-7071] port 'sof_state_out' of module 'top_bd_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:932]
-WARNING: [Synth 8-7023] instance 'v_axi4s_vid_out_0' of module 'top_bd_v_axi4s_vid_out_0_0' has 32 connections declared, but only 23 given [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:932]
-INFO: [Synth 8-6157] synthesizing module 'top_bd_v_tc_0_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_v_tc_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_bd_v_tc_0_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-1560-C88/realtime/top_bd_v_tc_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'fsync_out' of module 'top_bd_v_tc_0_0' is unconnected for instance 'v_tc_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:956]
-WARNING: [Synth 8-7023] instance 'v_tc_0' of module 'top_bd_v_tc_0_0' has 11 connections declared, but only 10 given [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:956]
+INFO: [Synth 8-6155] done synthesizing module 'top_bd_ps7_0_axi_periph_0' (0#1) [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:1152]
+INFO: [Synth 8-6157] synthesizing module 'top_bd_rst_ps7_0_100M_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_rst_ps7_0_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_bd_rst_ps7_0_100M_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_rst_ps7_0_100M_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'top_bd_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:928]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'top_bd_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:928]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'top_bd_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:928]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'top_bd_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:928]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'top_bd_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:928]
+INFO: [Synth 8-6157] synthesizing module 'top_bd_util_vector_logic_0_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_util_vector_logic_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_bd_util_vector_logic_0_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_util_vector_logic_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_bd_v_axi4s_vid_out_0_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_v_axi4s_vid_out_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_bd_v_axi4s_vid_out_0_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_v_axi4s_vid_out_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'vid_vblank' of module 'top_bd_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:938]
+WARNING: [Synth 8-7071] port 'vid_hblank' of module 'top_bd_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:938]
+WARNING: [Synth 8-7071] port 'vid_field_id' of module 'top_bd_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:938]
+WARNING: [Synth 8-7071] port 'locked' of module 'top_bd_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:938]
+WARNING: [Synth 8-7071] port 'overflow' of module 'top_bd_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:938]
+WARNING: [Synth 8-7071] port 'underflow' of module 'top_bd_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:938]
+WARNING: [Synth 8-7071] port 'fifo_read_level' of module 'top_bd_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:938]
+WARNING: [Synth 8-7071] port 'status' of module 'top_bd_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:938]
+WARNING: [Synth 8-7071] port 'sof_state_out' of module 'top_bd_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:938]
+WARNING: [Synth 8-7023] instance 'v_axi4s_vid_out_0' of module 'top_bd_v_axi4s_vid_out_0_0' has 32 connections declared, but only 23 given [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:938]
+INFO: [Synth 8-6157] synthesizing module 'top_bd_v_tc_0_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_v_tc_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_bd_v_tc_0_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_v_tc_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'fsync_out' of module 'top_bd_v_tc_0_0' is unconnected for instance 'v_tc_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:962]
+WARNING: [Synth 8-7023] instance 'v_tc_0' of module 'top_bd_v_tc_0_0' has 11 connections declared, but only 10 given [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:962]
+INFO: [Synth 8-6157] synthesizing module 'top_bd_vio_0_0' [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_vio_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_bd_vio_0_0' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/.Xil/Vivado-7268-C88/realtime/top_bd_vio_0_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'top_bd_xlconstant_0_0' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ip/top_bd_xlconstant_0_0/synth/top_bd_xlconstant_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (0#1) [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'top_bd_xlconstant_0_0' (0#1) [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ip/top_bd_xlconstant_0_0/synth/top_bd_xlconstant_0_0.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'top_bd' (0#1) [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:465]
 INFO: [Synth 8-6155] done synthesizing module 'top_bd_wrapper' (0#1) [D:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/hdl/top_bd_wrapper.v:12]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_0'. This will prevent further optimization [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:973]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'image_process_0'. This will prevent further optimization [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/synth/top_bd.v:753]
 WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_TL7I3Q is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_TL7I3Q is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ACLK in module top_bd_ps7_0_axi_periph_0 is either unconnected or has no load
@@ -119,18 +123,18 @@ WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_HDYSKV is eith
 WARNING: [Synth 8-7129] Port ACLK in module top_bd_axi_mem_intercon_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ARESETN in module top_bd_axi_mem_intercon_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2504.043 ; gain = 506.871
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2510.949 ; gain = 507.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2521.973 ; gain = 524.801
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2528.867 ; gain = 525.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2521.973 ; gain = 524.801
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2528.867 ; gain = 525.535
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2521.973 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 2528.867 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -143,8 +147,6 @@ Parsing XDC File [d:/Projects/prj/AMD/image_processing/image_processing.gen/sour
 Finished Parsing XDC File [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ip/top_bd_rst_ps7_0_100M_0/top_bd_rst_ps7_0_100M_0/top_bd_rst_ps7_0_100M_0_in_context.xdc] for cell 'top_bd_i/rst_ps7_0_100M'
 Parsing XDC File [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ip/top_bd_auto_pc_1/top_bd_auto_pc_1/top_bd_auto_pc_1_in_context.xdc] for cell 'top_bd_i/axi_mem_intercon/s00_couplers/auto_pc'
 Finished Parsing XDC File [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ip/top_bd_auto_pc_1/top_bd_auto_pc_1/top_bd_auto_pc_1_in_context.xdc] for cell 'top_bd_i/axi_mem_intercon/s00_couplers/auto_pc'
-Parsing XDC File [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ip/top_bd_image_process_0_0/top_bd_image_process_0_0/top_bd_image_process_0_0_in_context.xdc] for cell 'top_bd_i/image_process_0'
-Finished Parsing XDC File [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ip/top_bd_image_process_0_0/top_bd_image_process_0_0/top_bd_image_process_0_0_in_context.xdc] for cell 'top_bd_i/image_process_0'
 Parsing XDC File [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ip/top_bd_axi_vdma_0_0/top_bd_axi_vdma_0_0/top_bd_axi_vdma_0_0_in_context.xdc] for cell 'top_bd_i/axi_vdma_0'
 Finished Parsing XDC File [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ip/top_bd_axi_vdma_0_0/top_bd_axi_vdma_0_0/top_bd_axi_vdma_0_0_in_context.xdc] for cell 'top_bd_i/axi_vdma_0'
 Parsing XDC File [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ip/top_bd_v_tc_0_0/top_bd_v_tc_0_0/top_bd_v_tc_0_0_in_context.xdc] for cell 'top_bd_i/v_tc_0'
@@ -157,6 +159,10 @@ Parsing XDC File [d:/Projects/prj/AMD/image_processing/image_processing.gen/sour
 Finished Parsing XDC File [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ip/top_bd_util_vector_logic_0_0/top_bd_util_vector_logic_0_0/top_bd_util_vector_logic_0_0_in_context.xdc] for cell 'top_bd_i/util_vector_logic_0'
 Parsing XDC File [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ip/top_bd_DVI_Transmitter_0_0/top_bd_DVI_Transmitter_0_0/top_bd_DVI_Transmitter_0_0_in_context.xdc] for cell 'top_bd_i/DVI_Transmitter_0'
 Finished Parsing XDC File [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ip/top_bd_DVI_Transmitter_0_0/top_bd_DVI_Transmitter_0_0/top_bd_DVI_Transmitter_0_0_in_context.xdc] for cell 'top_bd_i/DVI_Transmitter_0'
+Parsing XDC File [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ip/top_bd_image_process_0_0/top_bd_image_process_0_0/top_bd_image_process_0_0_in_context.xdc] for cell 'top_bd_i/image_process_0'
+Finished Parsing XDC File [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ip/top_bd_image_process_0_0/top_bd_image_process_0_0/top_bd_image_process_0_0_in_context.xdc] for cell 'top_bd_i/image_process_0'
+Parsing XDC File [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ip/top_bd_vio_0_0/top_bd_vio_0_0/top_bd_vio_0_0_in_context.xdc] for cell 'top_bd_i/vio_0'
+Finished Parsing XDC File [d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ip/top_bd_vio_0_0/top_bd_vio_0_0/top_bd_vio_0_0_in_context.xdc] for cell 'top_bd_i/vio_0'
 Parsing XDC File [D:/Projects/prj/AMD/image_processing/image_processing.srcs/constrs_1/new/pin.xdc]
 WARNING: [Vivado 12-507] No nets matched 'top_bd_i/rgb2dvi_0/U0/DataEncoders[0].DataSerializer/sDataOut'. [D:/Projects/prj/AMD/image_processing/image_processing.srcs/constrs_1/new/pin.xdc:73]
 WARNING: [Vivado 12-507] No nets matched 'top_bd_i/rgb2dvi_0/U0/DataEncoders[2].DataSerializer/sDataOut'. [D:/Projects/prj/AMD/image_processing/image_processing.srcs/constrs_1/new/pin.xdc:74]
@@ -170,23 +176,23 @@ Parsing XDC File [D:/Projects/prj/AMD/image_processing/image_processing.runs/syn
 Finished Parsing XDC File [D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2544.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2551.672 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2544.793 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2551.672 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/AMD/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2544.793 ; gain = 547.621
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2551.672 ; gain = 548.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2544.793 ; gain = 547.621
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2551.672 ; gain = 548.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -473,6 +479,12 @@ Applied set_property MARK_DEBUG = true for top_bd_i/v_axi4s_vid_out_0_vid_io_out
 Applied set_property MARK_DEBUG = true for top_bd_i/v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO. (constraint file  D:/Projects/prj/AMD/image_processing/image_processing.srcs/constrs_1/new/pin.xdc, line 41).
 Applied set_property MARK_DEBUG = true for top_bd_i/image_process_0_video_stream_tdata_o[1]. (constraint file  D:/Projects/prj/AMD/image_processing/image_processing.srcs/constrs_1/new/pin.xdc, line 48).
 Applied set_property MARK_DEBUG = false for top_bd_i/clk_wiz_0_locked. (constraint file  D:/Projects/prj/AMD/image_processing/image_processing.srcs/constrs_1/new/pin.xdc, line 82).
+Applied set_property MARK_DEBUG = true for top_bd_i/v_axi4s_vid_out_0_vtg_ce. (constraint file  D:/Projects/prj/AMD/image_processing/image_processing.srcs/constrs_1/new/pin.xdc, line 85).
+Applied set_property MARK_DEBUG = true for top_bd_i/v_tc_0_vtiming_out_VSYNC. (constraint file  D:/Projects/prj/AMD/image_processing/image_processing.srcs/constrs_1/new/pin.xdc, line 86).
+Applied set_property MARK_DEBUG = true for top_bd_i/v_tc_0_vtiming_out_VBLANK. (constraint file  D:/Projects/prj/AMD/image_processing/image_processing.srcs/constrs_1/new/pin.xdc, line 87).
+Applied set_property MARK_DEBUG = true for top_bd_i/v_tc_0_vtiming_out_HSYNC. (constraint file  D:/Projects/prj/AMD/image_processing/image_processing.srcs/constrs_1/new/pin.xdc, line 88).
+Applied set_property MARK_DEBUG = true for top_bd_i/v_tc_0_vtiming_out_HBLANK. (constraint file  D:/Projects/prj/AMD/image_processing/image_processing.srcs/constrs_1/new/pin.xdc, line 89).
+Applied set_property MARK_DEBUG = true for top_bd_i/v_tc_0_vtiming_out_ACTIVE_VIDEO. (constraint file  D:/Projects/prj/AMD/image_processing/image_processing.srcs/constrs_1/new/pin.xdc, line 90).
 Applied set_property KEEP_HIERARCHY = SOFT for top_bd_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for top_bd_i/processing_system7_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for top_bd_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
@@ -480,7 +492,6 @@ Applied set_property KEEP_HIERARCHY = SOFT for top_bd_i/ps7_0_axi_periph. (const
 Applied set_property KEEP_HIERARCHY = SOFT for top_bd_i/rst_ps7_0_100M. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for top_bd_i/axi_mem_intercon/s00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for top_bd_i/axi_mem_intercon. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for top_bd_i/image_process_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for top_bd_i/axi_vdma_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for top_bd_i/v_tc_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for top_bd_i/v_axi4s_vid_out_0. (constraint file  auto generated constraint).
@@ -488,11 +499,13 @@ Applied set_property KEEP_HIERARCHY = SOFT for top_bd_i/clk_wiz_0. (constraint f
 Applied set_property KEEP_HIERARCHY = SOFT for top_bd_i/util_vector_logic_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for top_bd_i/xlconstant_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for top_bd_i/DVI_Transmitter_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for top_bd_i/image_process_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for top_bd_i/vio_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2544.793 ; gain = 547.621
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2551.672 ; gain = 548.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2544.793 ; gain = 547.621
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2551.672 ; gain = 548.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -523,25 +536,25 @@ WARNING: [Synth 8-7129] Port ARESETN in module top_bd_axi_mem_intercon_0 is eith
 WARNING: [Synth 8-7129] Port M00_ACLK in module top_bd_axi_mem_intercon_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M00_ARESETN in module top_bd_axi_mem_intercon_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2544.793 ; gain = 547.621
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2551.672 ; gain = 548.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2544.793 ; gain = 547.621
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2551.672 ; gain = 548.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2544.793 ; gain = 547.621
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2551.672 ; gain = 548.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2544.793 ; gain = 547.621
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2551.672 ; gain = 548.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -559,37 +572,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2544.793 ; gain = 547.621
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2551.672 ; gain = 548.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2544.793 ; gain = 547.621
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2551.672 ; gain = 548.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2544.793 ; gain = 547.621
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2551.672 ; gain = 548.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2544.793 ; gain = 547.621
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2551.672 ; gain = 548.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2544.793 ; gain = 547.621
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2551.672 ; gain = 548.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2544.793 ; gain = 547.621
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2551.672 ; gain = 548.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -610,6 +623,7 @@ Report BlackBoxes:
 |9     |top_bd_util_vector_logic_0_0  |         1|
 |10    |top_bd_v_axi4s_vid_out_0_0    |         1|
 |11    |top_bd_v_tc_0_0               |         1|
+|12    |top_bd_vio_0_0                |         1|
 +------+------------------------------+----------+
 
 Report Cell Usage: 
@@ -626,28 +640,27 @@ Report Cell Usage:
 |9     |top_bd_util_vector_logic_0  |     1|
 |10    |top_bd_v_axi4s_vid_out_0    |     1|
 |11    |top_bd_v_tc_0               |     1|
+|12    |top_bd_vio_0                |     1|
 +------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2544.793 ; gain = 547.621
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2551.672 ; gain = 548.340
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 2544.793 ; gain = 524.801
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2544.793 ; gain = 547.621
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 2551.672 ; gain = 525.535
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2551.672 ; gain = 548.340
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2544.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2551.672 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2549.625 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2556.555 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 65e89a55
+Synth Design complete, checksum: 12036fe
 INFO: [Common 17-83] Releasing license: Synthesis
-64 Infos, 61 Warnings, 0 Critical Warnings and 0 Errors encountered.
+68 Infos, 61 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2553.660 ; gain = 967.590
-INFO: [Common 17-600] The following parameters have non-default value.
-tcl.collectionResultDisplayLimit
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2560.512 ; gain = 965.996
 INFO: [Common 17-1381] The checkpoint 'D:/Projects/prj/AMD/image_processing/image_processing.runs/synth_1/top_bd_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_bd_wrapper_utilization_synth.rpt -pb top_bd_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Dec 22 12:19:37 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 12 20:20:29 2025...

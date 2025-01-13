@@ -3,7 +3,7 @@
 #include<xil_io.h>
 #include<xparameters.h>
 #include<xil_cache.h>
-#include"pic.h"
+#include"img.h"
 
 
 #define IMG_WIDTH       640

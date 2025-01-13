@@ -2254,3 +2254,12 @@ con
 
 12:30:38 INFO  : Launch script is exported to file 'D:\Projects\prj\AMD\image_processing\workspace\display_demo_system\_ide\scripts\debugger_display_demo-default.tcl'
 12:31:28 INFO  : Disconnected from the channel tcfchan#14.
+20:31:08 DEBUG : Logs will be stored at 'D:/Projects/prj/AMD/image_processing/workspace/IDE.log'.
+20:31:09 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\Projects\prj\AMD\image_processing\workspace\temp_xsdb_launch_script.tcl
+20:31:13 INFO  : Registering command handlers for Vitis TCF services
+20:31:14 INFO  : XSCT server has started successfully.
+20:31:14 INFO  : Platform repository initialization has completed.
+20:31:19 INFO  : plnx-install-location is set to ''
+20:31:19 INFO  : Successfully done setting XSCT server connection channel  
+20:31:19 INFO  : Successfully done query RDI_DATADIR 
+20:31:19 INFO  : Successfully done setting workspace for the tool. 

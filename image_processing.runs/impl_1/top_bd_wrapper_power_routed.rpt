@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2.2 (win64) Build 3788238 Tue Feb 21 20:00:34 MST 2023
-| Date             : Sun Jan 12 20:23:35 2025
+| Date             : Tue Jan 14 18:06:39 2025
 | Host             : C88 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_bd_wrapper_power_routed.rpt -pb top_bd_wrapper_power_summary_routed.pb -rpx top_bd_wrapper_power_routed.rpx
 | Design           : top_bd_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.686        |
+| Total On-Chip Power (W)  | 1.678        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.545        |
+| Dynamic (W)              | 1.537        |
 | Device Static (W)        | 0.141        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 65.5         |
-| Junction Temperature (C) | 44.5         |
+| Max Ambient (C)          | 65.7         |
+| Junction Temperature (C) | 44.3         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -65,9 +65,9 @@ Table of Contents
 | Block RAM                |     0.006 |       15 |       140 |           10.71 |
 | MMCM                     |     0.096 |        1 |         4 |           25.00 |
 | I/O                      |     0.131 |        8 |       200 |            4.00 |
-| PS7                      |     1.277 |        1 |       --- |             --- |
+| PS7                      |     1.268 |        1 |       --- |             --- |
 | Static Power             |     0.141 |          |           |                 |
-| Total                    |     1.686 |          |           |                 |
+| Total                    |     1.678 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -90,9 +90,9 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccpint   |       1.000 |     0.702 |       0.672 |      0.030 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.696 |       0.666 |      0.030 |       NA    | Unspecified | NA         |
 | Vccpaux   |       1.800 |     0.036 |       0.026 |      0.010 |       NA    | Unspecified | NA         |
-| Vccpll    |       1.800 |     0.018 |       0.015 |      0.003 |       NA    | Unspecified | NA         |
+| Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |       NA    | Unspecified | NA         |
 | Vcco_ddr  |       1.500 |     0.356 |       0.354 |      0.002 |       NA    | Unspecified | NA         |
 | Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -157,19 +157,19 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| top_bd_wrapper           |     1.545 |
+| top_bd_wrapper           |     1.537 |
 |   dbg_hub                |     0.003 |
 |     inst                 |     0.003 |
 |       BSCANID.u_xsdbm_id |     0.003 |
-|   top_bd_i               |     1.524 |
+|   top_bd_i               |     1.515 |
 |     DVI_Transmitter_0    |     0.132 |
 |       inst               |     0.132 |
 |     axi_vdma_0           |     0.010 |
 |       U0                 |     0.010 |
 |     clk_wiz_0            |     0.096 |
 |       inst               |     0.096 |
-|     processing_system7_0 |     1.277 |
-|       inst               |     1.277 |
+|     processing_system7_0 |     1.269 |
+|       inst               |     1.269 |
 |     ps7_0_axi_periph     |     0.004 |
 |       s00_couplers       |     0.004 |
 |     v_axi4s_vid_out_0    |     0.002 |

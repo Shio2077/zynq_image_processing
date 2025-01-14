@@ -1,28 +1,23 @@
+
+#include<xil_cache.h>
 #include<xil_types.h>
 #include<string.h>
 #include<xil_io.h>
 #include<xparameters.h>
-#include<xil_cache.h>
-#include"pic.h"
+#include"defines.h"
+#include"../includes/img.h"
 
 
-#define IMG_WIDTH       640
-#define IMG_HEIGHT      480
-#define BYTES4PX         3
-#define MM2SCR_OFFSET   0x00
-#define MM2SSA1_OFFSET  0x5C
-#define MM2SSA2_OFFSET  0x60
-#define MM2SSA3_OFFSET  0x64
-#define MM2SSTD_OFFSET  0x58
-#define MM2SHZ_OFFSET   0x54
-#define MM2SVZ_OFFSET   0x50
 
-u8 image[IMG_WIDTH*IMG_HEIGHT*BYTES4PX];
+
+
+//u8 image[IMG_WIDTH*IMG_HEIGHT*BYTES4PX];
 
 
 int main(){
     // Task 1: Display white screen
-	u8 *p_img = image;
+	unsigned char *p_img;
+	p_img = image;
 	memset(p_img, 0xB3, IMG_WIDTH*IMG_HEIGHT*BYTES4PX);
     Xil_DCacheFlush();
 

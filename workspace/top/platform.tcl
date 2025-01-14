@@ -71,3 +71,25 @@ platform generate -domains
 platform config -updatehw {D:/Projects/prj/AMD/image_processing/top.xsa}
 platform config -updatehw {D:/Projects/prj/AMD/image_processing/top.xsa}
 platform generate -domains 
+platform active {top}
+platform config -updatehw {D:/Projects/prj/AMD/image_processing/top_bd_wrapper.xsa}
+platform generate
+platform generate -domains 
+platform clean
+platform generate
+platform config -updatehw {D:/Projects/prj/AMD/image_processing/top_bd_wrapper.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/Projects/prj/AMD/image_processing/top_bd_wrapper.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/Projects/prj/AMD/image_processing/top_bd_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {D:/Projects/prj/AMD/image_processing/top.xsa}
+platform generate -domains 
+platform active {top}
+platform config -updatehw {D:/Projects/prj/AMD/image_processing/top.xsa}
+platform clean
+platform generate
+platform clean
+platform generate

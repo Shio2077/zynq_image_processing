@@ -55,7 +55,7 @@
 #define XPAR_AXI_VDMA_0_ENABLE_VIDPRMTR_READS 1U
 #define XPAR_AXI_VDMA_0_USE_FSYNC 1U
 #define XPAR_AXI_VDMA_0_FLUSH_ON_FSYNC 1U
-#define XPAR_AXI_VDMA_0_MM2S_LINEBUFFER_DEPTH 2048U
+#define XPAR_AXI_VDMA_0_MM2S_LINEBUFFER_DEPTH 4096U
 #define XPAR_AXI_VDMA_0_S2MM_LINEBUFFER_DEPTH 512U
 #define XPAR_AXI_VDMA_0_INCLUDE_INTERNAL_GENLOCK 1U
 #define XPAR_AXI_VDMA_0_S2MM_SOF_ENABLE 1U
@@ -97,7 +97,7 @@
 #define XPAR_AXIVDMA_0_ENABLE_VIDPRMTR_READS 1U
 #define XPAR_AXIVDMA_0_USE_FSYNC 1U
 #define XPAR_AXIVDMA_0_FLUSH_ON_FSYNC 1U
-#define XPAR_AXIVDMA_0_MM2S_LINEBUFFER_DEPTH 2048U
+#define XPAR_AXIVDMA_0_MM2S_LINEBUFFER_DEPTH 4096U
 #define XPAR_AXIVDMA_0_S2MM_LINEBUFFER_DEPTH 512U
 #define XPAR_AXIVDMA_0_INCLUDE_INTERNAL_GENLOCK 1U
 #define XPAR_AXIVDMA_0_S2MM_SOF_ENABLE 1U
@@ -302,6 +302,25 @@
 
 /******************************************************************/
 
+/* Definitions for driver GPIOPS */
+#define XPAR_XGPIOPS_NUM_INSTANCES 1
+
+/* Definitions for peripheral PS7_GPIO_0 */
+#define XPAR_PS7_GPIO_0_DEVICE_ID 0
+#define XPAR_PS7_GPIO_0_BASEADDR 0xE000A000
+#define XPAR_PS7_GPIO_0_HIGHADDR 0xE000AFFF
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral PS7_GPIO_0 */
+#define XPAR_XGPIOPS_0_DEVICE_ID XPAR_PS7_GPIO_0_DEVICE_ID
+#define XPAR_XGPIOPS_0_BASEADDR 0xE000A000
+#define XPAR_XGPIOPS_0_HIGHADDR 0xE000AFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver SCUGIC */
 #define XPAR_XSCUGIC_NUM_INSTANCES 1U
 
@@ -357,6 +376,27 @@
 #define XPAR_SCUWDT_0_DEVICE_ID XPAR_PS7_SCUWDT_0_DEVICE_ID
 #define XPAR_SCUWDT_0_BASEADDR 0xF8F00620
 #define XPAR_SCUWDT_0_HIGHADDR 0xF8F006FF
+
+
+/******************************************************************/
+
+/* Definitions for driver SPIPS */
+#define XPAR_XSPIPS_NUM_INSTANCES 1
+
+/* Definitions for peripheral PS7_SPI_0 */
+#define XPAR_PS7_SPI_0_DEVICE_ID 0
+#define XPAR_PS7_SPI_0_BASEADDR 0xE0006000
+#define XPAR_PS7_SPI_0_HIGHADDR 0xE0006FFF
+#define XPAR_PS7_SPI_0_SPI_CLK_FREQ_HZ 166666672
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral PS7_SPI_0 */
+#define XPAR_XSPIPS_0_DEVICE_ID XPAR_PS7_SPI_0_DEVICE_ID
+#define XPAR_XSPIPS_0_BASEADDR 0xE0006000
+#define XPAR_XSPIPS_0_HIGHADDR 0xE0006FFF
+#define XPAR_XSPIPS_0_SPI_CLK_FREQ_HZ 166666672
 
 
 /******************************************************************/

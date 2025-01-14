@@ -1,7 +1,7 @@
 // Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2.2 (win64) Build 3788238 Tue Feb 21 20:00:34 MST 2023
-// Date        : Sun Dec 22 12:18:32 2024
+// Date        : Tue Jan 14 17:59:31 2025
 // Host        : C88 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/ip/top_bd_processing_system7_0_0/top_bd_processing_system7_0_0_sim_netlist.v
@@ -15,7 +15,24 @@
 (* CHECK_LICENSE_TYPE = "top_bd_processing_system7_0_0,processing_system7_v5_5_processing_system7,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "processing_system7_v5_5_processing_system7,Vivado 2022.2.2" *) 
 (* NotValidForBitStream *)
 module top_bd_processing_system7_0_0
-   (M_AXI_GP0_ARVALID,
+   (GPIO_I,
+    GPIO_O,
+    GPIO_T,
+    SPI0_SCLK_I,
+    SPI0_SCLK_O,
+    SPI0_SCLK_T,
+    SPI0_MOSI_I,
+    SPI0_MOSI_O,
+    SPI0_MOSI_T,
+    SPI0_MISO_I,
+    SPI0_MISO_O,
+    SPI0_MISO_T,
+    SPI0_SS_I,
+    SPI0_SS_O,
+    SPI0_SS1_O,
+    SPI0_SS2_O,
+    SPI0_SS_T,
+    M_AXI_GP0_ARVALID,
     M_AXI_GP0_AWVALID,
     M_AXI_GP0_BREADY,
     M_AXI_GP0_RREADY,
@@ -123,6 +140,23 @@ module top_bd_processing_system7_0_0
     PS_SRSTB,
     PS_CLK,
     PS_PORB);
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 GPIO_0 TRI_I" *) input [31:0]GPIO_I;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 GPIO_0 TRI_O" *) output [31:0]GPIO_O;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 GPIO_0 TRI_T" *) output [31:0]GPIO_T;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SCK_I" *) input SPI0_SCLK_I;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SCK_O" *) output SPI0_SCLK_O;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SCK_T" *) output SPI0_SCLK_T;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 IO0_I" *) input SPI0_MOSI_I;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 IO0_O" *) output SPI0_MOSI_O;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 IO0_T" *) output SPI0_MOSI_T;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 IO1_I" *) input SPI0_MISO_I;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 IO1_O" *) output SPI0_MISO_O;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 IO1_T" *) output SPI0_MISO_T;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SS_I" *) input SPI0_SS_I;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SS_O" *) output SPI0_SS_O;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SS1_O" *) output SPI0_SS1_O;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SS2_O" *) output SPI0_SS2_O;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SS_T" *) output SPI0_SS_T;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARVALID" *) output M_AXI_GP0_ARVALID;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWVALID" *) output M_AXI_GP0_AWVALID;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 BREADY" *) output M_AXI_GP0_BREADY;
@@ -254,6 +288,9 @@ module top_bd_processing_system7_0_0
   wire FCLK_CLK0;
   wire FCLK_CLK1;
   wire FCLK_RESET0_N;
+  wire [31:0]GPIO_I;
+  wire [31:0]GPIO_O;
+  wire [31:0]GPIO_T;
   wire [53:0]MIO;
   wire M_AXI_GP0_ACLK;
   wire [31:0]M_AXI_GP0_ARADDR;
@@ -297,6 +334,20 @@ module top_bd_processing_system7_0_0
   wire PS_CLK;
   wire PS_PORB;
   wire PS_SRSTB;
+  wire SPI0_MISO_I;
+  wire SPI0_MISO_O;
+  wire SPI0_MISO_T;
+  wire SPI0_MOSI_I;
+  wire SPI0_MOSI_O;
+  wire SPI0_MOSI_T;
+  wire SPI0_SCLK_I;
+  wire SPI0_SCLK_O;
+  wire SPI0_SCLK_T;
+  wire SPI0_SS1_O;
+  wire SPI0_SS2_O;
+  wire SPI0_SS_I;
+  wire SPI0_SS_O;
+  wire SPI0_SS_T;
   wire S_AXI_HP0_ACLK;
   wire [31:0]S_AXI_HP0_ARADDR;
   wire [1:0]S_AXI_HP0_ARBURST;
@@ -456,16 +507,6 @@ module top_bd_processing_system7_0_0
   wire NLW_inst_SDIO1_CMD_O_UNCONNECTED;
   wire NLW_inst_SDIO1_CMD_T_UNCONNECTED;
   wire NLW_inst_SDIO1_LED_UNCONNECTED;
-  wire NLW_inst_SPI0_MISO_O_UNCONNECTED;
-  wire NLW_inst_SPI0_MISO_T_UNCONNECTED;
-  wire NLW_inst_SPI0_MOSI_O_UNCONNECTED;
-  wire NLW_inst_SPI0_MOSI_T_UNCONNECTED;
-  wire NLW_inst_SPI0_SCLK_O_UNCONNECTED;
-  wire NLW_inst_SPI0_SCLK_T_UNCONNECTED;
-  wire NLW_inst_SPI0_SS1_O_UNCONNECTED;
-  wire NLW_inst_SPI0_SS2_O_UNCONNECTED;
-  wire NLW_inst_SPI0_SS_O_UNCONNECTED;
-  wire NLW_inst_SPI0_SS_T_UNCONNECTED;
   wire NLW_inst_SPI1_MISO_O_UNCONNECTED;
   wire NLW_inst_SPI1_MISO_T_UNCONNECTED;
   wire NLW_inst_SPI1_MOSI_O_UNCONNECTED;
@@ -545,8 +586,6 @@ module top_bd_processing_system7_0_0
   wire [1:0]NLW_inst_EVENT_STANDBYWFE_UNCONNECTED;
   wire [1:0]NLW_inst_EVENT_STANDBYWFI_UNCONNECTED;
   wire [31:0]NLW_inst_FTMT_P2F_DEBUG_UNCONNECTED;
-  wire [63:0]NLW_inst_GPIO_O_UNCONNECTED;
-  wire [63:0]NLW_inst_GPIO_T_UNCONNECTED;
   wire [1:1]NLW_inst_M_AXI_GP0_ARCACHE_UNCONNECTED;
   wire [2:2]NLW_inst_M_AXI_GP0_ARSIZE_UNCONNECTED;
   wire [1:1]NLW_inst_M_AXI_GP0_AWCACHE_UNCONNECTED;
@@ -641,7 +680,7 @@ module top_bd_processing_system7_0_0
   (* C_DM_WIDTH = "4" *) 
   (* C_DQS_WIDTH = "4" *) 
   (* C_DQ_WIDTH = "32" *) 
-  (* C_EMIO_GPIO_WIDTH = "64" *) 
+  (* C_EMIO_GPIO_WIDTH = "32" *) 
   (* C_EN_EMIO_ENET0 = "0" *) 
   (* C_EN_EMIO_ENET1 = "0" *) 
   (* C_EN_EMIO_PJTAG = "0" *) 
@@ -694,7 +733,7 @@ module top_bd_processing_system7_0_0
   (* C_USE_S_AXI_HP2 = "0" *) 
   (* C_USE_S_AXI_HP3 = "0" *) 
   (* HW_HANDOFF = "top_bd_processing_system7_0_0.hwdef" *) 
-  (* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={100} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={100} usageRate={0.5} />/>" *) 
+  (* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><IO interface={SPI} ioStandard={} bidis={0} ioBank={} clockFreq={166.666672} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1000.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={100} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={100} usageRate={0.5} />/>" *) 
   (* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
   top_bd_processing_system7_0_0_processing_system7_v5_5_processing_system7 inst
        (.CAN0_PHY_RX(1'b0),
@@ -848,9 +887,9 @@ module top_bd_processing_system7_0_0
         .FTMT_P2F_TRIG_1(NLW_inst_FTMT_P2F_TRIG_1_UNCONNECTED),
         .FTMT_P2F_TRIG_2(NLW_inst_FTMT_P2F_TRIG_2_UNCONNECTED),
         .FTMT_P2F_TRIG_3(NLW_inst_FTMT_P2F_TRIG_3_UNCONNECTED),
-        .GPIO_I({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .GPIO_O(NLW_inst_GPIO_O_UNCONNECTED[63:0]),
-        .GPIO_T(NLW_inst_GPIO_T_UNCONNECTED[63:0]),
+        .GPIO_I(GPIO_I),
+        .GPIO_O(GPIO_O),
+        .GPIO_T(GPIO_T),
         .I2C0_SCL_I(1'b0),
         .I2C0_SCL_O(NLW_inst_I2C0_SCL_O_UNCONNECTED),
         .I2C0_SCL_T(NLW_inst_I2C0_SCL_T_UNCONNECTED),
@@ -1007,20 +1046,20 @@ module top_bd_processing_system7_0_0
         .SDIO1_DATA_T(NLW_inst_SDIO1_DATA_T_UNCONNECTED[3:0]),
         .SDIO1_LED(NLW_inst_SDIO1_LED_UNCONNECTED),
         .SDIO1_WP(1'b0),
-        .SPI0_MISO_I(1'b0),
-        .SPI0_MISO_O(NLW_inst_SPI0_MISO_O_UNCONNECTED),
-        .SPI0_MISO_T(NLW_inst_SPI0_MISO_T_UNCONNECTED),
-        .SPI0_MOSI_I(1'b0),
-        .SPI0_MOSI_O(NLW_inst_SPI0_MOSI_O_UNCONNECTED),
-        .SPI0_MOSI_T(NLW_inst_SPI0_MOSI_T_UNCONNECTED),
-        .SPI0_SCLK_I(1'b0),
-        .SPI0_SCLK_O(NLW_inst_SPI0_SCLK_O_UNCONNECTED),
-        .SPI0_SCLK_T(NLW_inst_SPI0_SCLK_T_UNCONNECTED),
-        .SPI0_SS1_O(NLW_inst_SPI0_SS1_O_UNCONNECTED),
-        .SPI0_SS2_O(NLW_inst_SPI0_SS2_O_UNCONNECTED),
-        .SPI0_SS_I(1'b0),
-        .SPI0_SS_O(NLW_inst_SPI0_SS_O_UNCONNECTED),
-        .SPI0_SS_T(NLW_inst_SPI0_SS_T_UNCONNECTED),
+        .SPI0_MISO_I(SPI0_MISO_I),
+        .SPI0_MISO_O(SPI0_MISO_O),
+        .SPI0_MISO_T(SPI0_MISO_T),
+        .SPI0_MOSI_I(SPI0_MOSI_I),
+        .SPI0_MOSI_O(SPI0_MOSI_O),
+        .SPI0_MOSI_T(SPI0_MOSI_T),
+        .SPI0_SCLK_I(SPI0_SCLK_I),
+        .SPI0_SCLK_O(SPI0_SCLK_O),
+        .SPI0_SCLK_T(SPI0_SCLK_T),
+        .SPI0_SS1_O(SPI0_SS1_O),
+        .SPI0_SS2_O(SPI0_SS2_O),
+        .SPI0_SS_I(SPI0_SS_I),
+        .SPI0_SS_O(SPI0_SS_O),
+        .SPI0_SS_T(SPI0_SS_T),
         .SPI1_MISO_I(1'b0),
         .SPI1_MISO_O(NLW_inst_SPI1_MISO_O_UNCONNECTED),
         .SPI1_MISO_T(NLW_inst_SPI1_MISO_T_UNCONNECTED),
@@ -1385,7 +1424,7 @@ module top_bd_processing_system7_0_0
 endmodule
 
 (* C_DM_WIDTH = "4" *) (* C_DQS_WIDTH = "4" *) (* C_DQ_WIDTH = "32" *) 
-(* C_EMIO_GPIO_WIDTH = "64" *) (* C_EN_EMIO_ENET0 = "0" *) (* C_EN_EMIO_ENET1 = "0" *) 
+(* C_EMIO_GPIO_WIDTH = "32" *) (* C_EN_EMIO_ENET0 = "0" *) (* C_EN_EMIO_ENET1 = "0" *) 
 (* C_EN_EMIO_PJTAG = "0" *) (* C_EN_EMIO_TRACE = "0" *) (* C_FCLK_CLK0_BUF = "TRUE" *) 
 (* C_FCLK_CLK1_BUF = "FALSE" *) (* C_FCLK_CLK2_BUF = "FALSE" *) (* C_FCLK_CLK3_BUF = "FALSE" *) 
 (* C_GP0_EN_MODIFIABLE_TXN = "1" *) (* C_GP1_EN_MODIFIABLE_TXN = "1" *) (* C_INCLUDE_ACP_TRANS_CHECK = "0" *) 
@@ -1403,7 +1442,7 @@ endmodule
 (* C_USE_S_AXI_ACP = "0" *) (* C_USE_S_AXI_GP0 = "0" *) (* C_USE_S_AXI_GP1 = "0" *) 
 (* C_USE_S_AXI_HP0 = "1" *) (* C_USE_S_AXI_HP1 = "0" *) (* C_USE_S_AXI_HP2 = "0" *) 
 (* C_USE_S_AXI_HP3 = "0" *) (* HW_HANDOFF = "top_bd_processing_system7_0_0.hwdef" *) (* ORIG_REF_NAME = "processing_system7_v5_5_processing_system7" *) 
-(* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={100} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={100} usageRate={0.5} />/>" *) (* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
+(* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><IO interface={SPI} ioStandard={} bidis={0} ioBank={} clockFreq={166.666672} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1000.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={100} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={100} usageRate={0.5} />/>" *) (* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
 module top_bd_processing_system7_0_0_processing_system7_v5_5_processing_system7
    (CAN0_PHY_TX,
     CAN0_PHY_RX,
@@ -2144,9 +2183,9 @@ module top_bd_processing_system7_0_0_processing_system7_v5_5_processing_system7
   input ENET1_MDIO_I;
   input ENET1_EXT_INTIN;
   input [7:0]ENET1_GMII_RXD;
-  input [63:0]GPIO_I;
-  output [63:0]GPIO_O;
-  output [63:0]GPIO_T;
+  input [31:0]GPIO_I;
+  output [31:0]GPIO_O;
+  output [31:0]GPIO_T;
   input I2C0_SDA_I;
   output I2C0_SDA_O;
   output I2C0_SDA_T;
@@ -2800,6 +2839,9 @@ module top_bd_processing_system7_0_0_processing_system7_v5_5_processing_system7
   wire FCLK_CLK1;
   wire [0:0]FCLK_CLK_unbuffered;
   wire FCLK_RESET0_N;
+  wire [31:0]GPIO_I;
+  wire [31:0]GPIO_O;
+  wire [31:0]GPIO_T;
   wire I2C0_SCL_T_n;
   wire I2C0_SDA_T_n;
   wire I2C1_SCL_T_n;
@@ -3339,9 +3381,6 @@ module top_bd_processing_system7_0_0_processing_system7_v5_5_processing_system7
   wire PS7_i_n_324;
   wire PS7_i_n_325;
   wire PS7_i_n_326;
-  wire PS7_i_n_327;
-  wire PS7_i_n_328;
-  wire PS7_i_n_329;
   wire PS7_i_n_330;
   wire PS7_i_n_331;
   wire PS7_i_n_332;
@@ -3540,7 +3579,6 @@ module top_bd_processing_system7_0_0_processing_system7_v5_5_processing_system7
   wire PS7_i_n_637;
   wire PS7_i_n_638;
   wire PS7_i_n_639;
-  wire PS7_i_n_64;
   wire PS7_i_n_640;
   wire PS7_i_n_641;
   wire PS7_i_n_642;
@@ -3561,7 +3599,6 @@ module top_bd_processing_system7_0_0_processing_system7_v5_5_processing_system7
   wire PS7_i_n_657;
   wire PS7_i_n_658;
   wire PS7_i_n_659;
-  wire PS7_i_n_66;
   wire PS7_i_n_660;
   wire PS7_i_n_661;
   wire PS7_i_n_662;
@@ -3582,7 +3619,6 @@ module top_bd_processing_system7_0_0_processing_system7_v5_5_processing_system7
   wire PS7_i_n_677;
   wire PS7_i_n_678;
   wire PS7_i_n_679;
-  wire PS7_i_n_68;
   wire PS7_i_n_680;
   wire PS7_i_n_681;
   wire PS7_i_n_682;
@@ -3731,73 +3767,9 @@ module top_bd_processing_system7_0_0_processing_system7_v5_5_processing_system7
   wire PS7_i_n_870;
   wire PS7_i_n_871;
   wire PS7_i_n_872;
-  wire PS7_i_n_873;
-  wire PS7_i_n_874;
-  wire PS7_i_n_875;
-  wire PS7_i_n_876;
-  wire PS7_i_n_877;
-  wire PS7_i_n_878;
-  wire PS7_i_n_879;
   wire PS7_i_n_88;
-  wire PS7_i_n_880;
-  wire PS7_i_n_881;
-  wire PS7_i_n_882;
-  wire PS7_i_n_883;
-  wire PS7_i_n_884;
-  wire PS7_i_n_885;
-  wire PS7_i_n_886;
-  wire PS7_i_n_887;
-  wire PS7_i_n_888;
-  wire PS7_i_n_889;
   wire PS7_i_n_89;
-  wire PS7_i_n_890;
-  wire PS7_i_n_891;
-  wire PS7_i_n_892;
-  wire PS7_i_n_893;
-  wire PS7_i_n_894;
-  wire PS7_i_n_895;
-  wire PS7_i_n_896;
-  wire PS7_i_n_897;
-  wire PS7_i_n_898;
-  wire PS7_i_n_899;
   wire PS7_i_n_9;
-  wire PS7_i_n_900;
-  wire PS7_i_n_901;
-  wire PS7_i_n_902;
-  wire PS7_i_n_903;
-  wire PS7_i_n_904;
-  wire PS7_i_n_905;
-  wire PS7_i_n_906;
-  wire PS7_i_n_907;
-  wire PS7_i_n_908;
-  wire PS7_i_n_909;
-  wire PS7_i_n_910;
-  wire PS7_i_n_911;
-  wire PS7_i_n_912;
-  wire PS7_i_n_913;
-  wire PS7_i_n_914;
-  wire PS7_i_n_915;
-  wire PS7_i_n_916;
-  wire PS7_i_n_917;
-  wire PS7_i_n_918;
-  wire PS7_i_n_919;
-  wire PS7_i_n_920;
-  wire PS7_i_n_921;
-  wire PS7_i_n_922;
-  wire PS7_i_n_923;
-  wire PS7_i_n_924;
-  wire PS7_i_n_925;
-  wire PS7_i_n_926;
-  wire PS7_i_n_927;
-  wire PS7_i_n_928;
-  wire PS7_i_n_929;
-  wire PS7_i_n_930;
-  wire PS7_i_n_931;
-  wire PS7_i_n_932;
-  wire PS7_i_n_933;
-  wire PS7_i_n_934;
-  wire PS7_i_n_935;
-  wire PS7_i_n_936;
   wire PS7_i_n_96;
   wire PS7_i_n_97;
   wire PS7_i_n_98;
@@ -3809,9 +3781,23 @@ module top_bd_processing_system7_0_0_processing_system7_v5_5_processing_system7
   wire [3:0]SDIO0_DATA_T_n;
   wire SDIO1_CMD_T_n;
   wire [3:0]SDIO1_DATA_T_n;
+  wire SPI0_MISO_I;
+  wire SPI0_MISO_O;
+  wire SPI0_MISO_T;
   wire SPI0_MISO_T_n;
+  wire SPI0_MOSI_I;
+  wire SPI0_MOSI_O;
+  wire SPI0_MOSI_T;
   wire SPI0_MOSI_T_n;
+  wire SPI0_SCLK_I;
+  wire SPI0_SCLK_O;
+  wire SPI0_SCLK_T;
   wire SPI0_SCLK_T_n;
+  wire SPI0_SS1_O;
+  wire SPI0_SS2_O;
+  wire SPI0_SS_I;
+  wire SPI0_SS_O;
+  wire SPI0_SS_T;
   wire SPI0_SS_T_n;
   wire SPI1_MISO_T_n;
   wire SPI1_MOSI_T_n;
@@ -3899,7 +3885,7 @@ module top_bd_processing_system7_0_0_processing_system7_v5_5_processing_system7
   wire buffered_PS_CLK;
   wire buffered_PS_PORB;
   wire buffered_PS_SRSTB;
-  wire [63:0]gpio_out_t_n;
+  wire [31:0]gpio_out_t_n;
   wire NLW_PS7_i_EMIOENET0GMIITXEN_UNCONNECTED;
   wire NLW_PS7_i_EMIOENET0GMIITXER_UNCONNECTED;
   wire NLW_PS7_i_EMIOENET1GMIITXEN_UNCONNECTED;
@@ -3909,6 +3895,8 @@ module top_bd_processing_system7_0_0_processing_system7_v5_5_processing_system7
   wire NLW_PS7_i_EMIOTRACECTL_UNCONNECTED;
   wire [7:0]NLW_PS7_i_EMIOENET0GMIITXD_UNCONNECTED;
   wire [7:0]NLW_PS7_i_EMIOENET1GMIITXD_UNCONNECTED;
+  wire [63:32]NLW_PS7_i_EMIOGPIOO_UNCONNECTED;
+  wire [63:32]NLW_PS7_i_EMIOGPIOTN_UNCONNECTED;
   wire [31:0]NLW_PS7_i_EMIOTRACEDATA_UNCONNECTED;
   wire [1:1]NLW_PS7_i_MAXIGP0ARCACHE_UNCONNECTED;
   wire [1:1]NLW_PS7_i_MAXIGP0AWCACHE_UNCONNECTED;
@@ -4033,134 +4021,6 @@ module top_bd_processing_system7_0_0_processing_system7_v5_5_processing_system7
   assign FTMT_P2F_TRIG_1 = \<const0> ;
   assign FTMT_P2F_TRIG_2 = \<const0> ;
   assign FTMT_P2F_TRIG_3 = \<const0> ;
-  assign GPIO_O[63] = \<const0> ;
-  assign GPIO_O[62] = \<const0> ;
-  assign GPIO_O[61] = \<const0> ;
-  assign GPIO_O[60] = \<const0> ;
-  assign GPIO_O[59] = \<const0> ;
-  assign GPIO_O[58] = \<const0> ;
-  assign GPIO_O[57] = \<const0> ;
-  assign GPIO_O[56] = \<const0> ;
-  assign GPIO_O[55] = \<const0> ;
-  assign GPIO_O[54] = \<const0> ;
-  assign GPIO_O[53] = \<const0> ;
-  assign GPIO_O[52] = \<const0> ;
-  assign GPIO_O[51] = \<const0> ;
-  assign GPIO_O[50] = \<const0> ;
-  assign GPIO_O[49] = \<const0> ;
-  assign GPIO_O[48] = \<const0> ;
-  assign GPIO_O[47] = \<const0> ;
-  assign GPIO_O[46] = \<const0> ;
-  assign GPIO_O[45] = \<const0> ;
-  assign GPIO_O[44] = \<const0> ;
-  assign GPIO_O[43] = \<const0> ;
-  assign GPIO_O[42] = \<const0> ;
-  assign GPIO_O[41] = \<const0> ;
-  assign GPIO_O[40] = \<const0> ;
-  assign GPIO_O[39] = \<const0> ;
-  assign GPIO_O[38] = \<const0> ;
-  assign GPIO_O[37] = \<const0> ;
-  assign GPIO_O[36] = \<const0> ;
-  assign GPIO_O[35] = \<const0> ;
-  assign GPIO_O[34] = \<const0> ;
-  assign GPIO_O[33] = \<const0> ;
-  assign GPIO_O[32] = \<const0> ;
-  assign GPIO_O[31] = \<const0> ;
-  assign GPIO_O[30] = \<const0> ;
-  assign GPIO_O[29] = \<const0> ;
-  assign GPIO_O[28] = \<const0> ;
-  assign GPIO_O[27] = \<const0> ;
-  assign GPIO_O[26] = \<const0> ;
-  assign GPIO_O[25] = \<const0> ;
-  assign GPIO_O[24] = \<const0> ;
-  assign GPIO_O[23] = \<const0> ;
-  assign GPIO_O[22] = \<const0> ;
-  assign GPIO_O[21] = \<const0> ;
-  assign GPIO_O[20] = \<const0> ;
-  assign GPIO_O[19] = \<const0> ;
-  assign GPIO_O[18] = \<const0> ;
-  assign GPIO_O[17] = \<const0> ;
-  assign GPIO_O[16] = \<const0> ;
-  assign GPIO_O[15] = \<const0> ;
-  assign GPIO_O[14] = \<const0> ;
-  assign GPIO_O[13] = \<const0> ;
-  assign GPIO_O[12] = \<const0> ;
-  assign GPIO_O[11] = \<const0> ;
-  assign GPIO_O[10] = \<const0> ;
-  assign GPIO_O[9] = \<const0> ;
-  assign GPIO_O[8] = \<const0> ;
-  assign GPIO_O[7] = \<const0> ;
-  assign GPIO_O[6] = \<const0> ;
-  assign GPIO_O[5] = \<const0> ;
-  assign GPIO_O[4] = \<const0> ;
-  assign GPIO_O[3] = \<const0> ;
-  assign GPIO_O[2] = \<const0> ;
-  assign GPIO_O[1] = \<const0> ;
-  assign GPIO_O[0] = \<const0> ;
-  assign GPIO_T[63] = \<const0> ;
-  assign GPIO_T[62] = \<const0> ;
-  assign GPIO_T[61] = \<const0> ;
-  assign GPIO_T[60] = \<const0> ;
-  assign GPIO_T[59] = \<const0> ;
-  assign GPIO_T[58] = \<const0> ;
-  assign GPIO_T[57] = \<const0> ;
-  assign GPIO_T[56] = \<const0> ;
-  assign GPIO_T[55] = \<const0> ;
-  assign GPIO_T[54] = \<const0> ;
-  assign GPIO_T[53] = \<const0> ;
-  assign GPIO_T[52] = \<const0> ;
-  assign GPIO_T[51] = \<const0> ;
-  assign GPIO_T[50] = \<const0> ;
-  assign GPIO_T[49] = \<const0> ;
-  assign GPIO_T[48] = \<const0> ;
-  assign GPIO_T[47] = \<const0> ;
-  assign GPIO_T[46] = \<const0> ;
-  assign GPIO_T[45] = \<const0> ;
-  assign GPIO_T[44] = \<const0> ;
-  assign GPIO_T[43] = \<const0> ;
-  assign GPIO_T[42] = \<const0> ;
-  assign GPIO_T[41] = \<const0> ;
-  assign GPIO_T[40] = \<const0> ;
-  assign GPIO_T[39] = \<const0> ;
-  assign GPIO_T[38] = \<const0> ;
-  assign GPIO_T[37] = \<const0> ;
-  assign GPIO_T[36] = \<const0> ;
-  assign GPIO_T[35] = \<const0> ;
-  assign GPIO_T[34] = \<const0> ;
-  assign GPIO_T[33] = \<const0> ;
-  assign GPIO_T[32] = \<const0> ;
-  assign GPIO_T[31] = \<const0> ;
-  assign GPIO_T[30] = \<const0> ;
-  assign GPIO_T[29] = \<const0> ;
-  assign GPIO_T[28] = \<const0> ;
-  assign GPIO_T[27] = \<const0> ;
-  assign GPIO_T[26] = \<const0> ;
-  assign GPIO_T[25] = \<const0> ;
-  assign GPIO_T[24] = \<const0> ;
-  assign GPIO_T[23] = \<const0> ;
-  assign GPIO_T[22] = \<const0> ;
-  assign GPIO_T[21] = \<const0> ;
-  assign GPIO_T[20] = \<const0> ;
-  assign GPIO_T[19] = \<const0> ;
-  assign GPIO_T[18] = \<const0> ;
-  assign GPIO_T[17] = \<const0> ;
-  assign GPIO_T[16] = \<const0> ;
-  assign GPIO_T[15] = \<const0> ;
-  assign GPIO_T[14] = \<const0> ;
-  assign GPIO_T[13] = \<const0> ;
-  assign GPIO_T[12] = \<const0> ;
-  assign GPIO_T[11] = \<const0> ;
-  assign GPIO_T[10] = \<const0> ;
-  assign GPIO_T[9] = \<const0> ;
-  assign GPIO_T[8] = \<const0> ;
-  assign GPIO_T[7] = \<const0> ;
-  assign GPIO_T[6] = \<const0> ;
-  assign GPIO_T[5] = \<const0> ;
-  assign GPIO_T[4] = \<const0> ;
-  assign GPIO_T[3] = \<const0> ;
-  assign GPIO_T[2] = \<const0> ;
-  assign GPIO_T[1] = \<const0> ;
-  assign GPIO_T[0] = \<const0> ;
   assign I2C0_SCL_O = \<const0> ;
   assign I2C0_SCL_T = \<const0> ;
   assign I2C0_SDA_O = \<const0> ;
@@ -4429,16 +4289,6 @@ module top_bd_processing_system7_0_0_processing_system7_v5_5_processing_system7
   assign SDIO1_DATA_T[1] = \<const0> ;
   assign SDIO1_DATA_T[0] = \<const0> ;
   assign SDIO1_LED = \<const0> ;
-  assign SPI0_MISO_O = \<const0> ;
-  assign SPI0_MISO_T = \<const0> ;
-  assign SPI0_MOSI_O = \<const0> ;
-  assign SPI0_MOSI_T = \<const0> ;
-  assign SPI0_SCLK_O = \<const0> ;
-  assign SPI0_SCLK_T = \<const0> ;
-  assign SPI0_SS1_O = \<const0> ;
-  assign SPI0_SS2_O = \<const0> ;
-  assign SPI0_SS_O = \<const0> ;
-  assign SPI0_SS_T = \<const0> ;
   assign SPI1_MISO_O = \<const0> ;
   assign SPI1_MISO_T = \<const0> ;
   assign SPI1_MOSI_O = \<const0> ;
@@ -5045,6 +4895,166 @@ module top_bd_processing_system7_0_0_processing_system7_v5_5_processing_system7
         .PAD(DDR_WEB));
   GND GND
        (.G(\<const0> ));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[0]_INST_0 
+       (.I0(gpio_out_t_n[0]),
+        .O(GPIO_T[0]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[10]_INST_0 
+       (.I0(gpio_out_t_n[10]),
+        .O(GPIO_T[10]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[11]_INST_0 
+       (.I0(gpio_out_t_n[11]),
+        .O(GPIO_T[11]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[12]_INST_0 
+       (.I0(gpio_out_t_n[12]),
+        .O(GPIO_T[12]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[13]_INST_0 
+       (.I0(gpio_out_t_n[13]),
+        .O(GPIO_T[13]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[14]_INST_0 
+       (.I0(gpio_out_t_n[14]),
+        .O(GPIO_T[14]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[15]_INST_0 
+       (.I0(gpio_out_t_n[15]),
+        .O(GPIO_T[15]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[16]_INST_0 
+       (.I0(gpio_out_t_n[16]),
+        .O(GPIO_T[16]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[17]_INST_0 
+       (.I0(gpio_out_t_n[17]),
+        .O(GPIO_T[17]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[18]_INST_0 
+       (.I0(gpio_out_t_n[18]),
+        .O(GPIO_T[18]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[19]_INST_0 
+       (.I0(gpio_out_t_n[19]),
+        .O(GPIO_T[19]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[1]_INST_0 
+       (.I0(gpio_out_t_n[1]),
+        .O(GPIO_T[1]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[20]_INST_0 
+       (.I0(gpio_out_t_n[20]),
+        .O(GPIO_T[20]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[21]_INST_0 
+       (.I0(gpio_out_t_n[21]),
+        .O(GPIO_T[21]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[22]_INST_0 
+       (.I0(gpio_out_t_n[22]),
+        .O(GPIO_T[22]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[23]_INST_0 
+       (.I0(gpio_out_t_n[23]),
+        .O(GPIO_T[23]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[24]_INST_0 
+       (.I0(gpio_out_t_n[24]),
+        .O(GPIO_T[24]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[25]_INST_0 
+       (.I0(gpio_out_t_n[25]),
+        .O(GPIO_T[25]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[26]_INST_0 
+       (.I0(gpio_out_t_n[26]),
+        .O(GPIO_T[26]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[27]_INST_0 
+       (.I0(gpio_out_t_n[27]),
+        .O(GPIO_T[27]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[28]_INST_0 
+       (.I0(gpio_out_t_n[28]),
+        .O(GPIO_T[28]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[29]_INST_0 
+       (.I0(gpio_out_t_n[29]),
+        .O(GPIO_T[29]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[2]_INST_0 
+       (.I0(gpio_out_t_n[2]),
+        .O(GPIO_T[2]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[30]_INST_0 
+       (.I0(gpio_out_t_n[30]),
+        .O(GPIO_T[30]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[31]_INST_0 
+       (.I0(gpio_out_t_n[31]),
+        .O(GPIO_T[31]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[3]_INST_0 
+       (.I0(gpio_out_t_n[3]),
+        .O(GPIO_T[3]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[4]_INST_0 
+       (.I0(gpio_out_t_n[4]),
+        .O(GPIO_T[4]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[5]_INST_0 
+       (.I0(gpio_out_t_n[5]),
+        .O(GPIO_T[5]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[6]_INST_0 
+       (.I0(gpio_out_t_n[6]),
+        .O(GPIO_T[6]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[7]_INST_0 
+       (.I0(gpio_out_t_n[7]),
+        .O(GPIO_T[7]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[8]_INST_0 
+       (.I0(gpio_out_t_n[8]),
+        .O(GPIO_T[8]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[9]_INST_0 
+       (.I0(gpio_out_t_n[9]),
+        .O(GPIO_T[9]));
   (* BOX_TYPE = "PRIMITIVE" *) 
   PS7 PS7_i
        (.DDRA(buffered_DDR_Addr),
@@ -5155,9 +5165,9 @@ module top_bd_processing_system7_0_0_processing_system7_v5_5_processing_system7
         .EMIOENET1PTPSYNCFRAMETX(PS7_i_n_41),
         .EMIOENET1SOFRX(PS7_i_n_42),
         .EMIOENET1SOFTX(PS7_i_n_43),
-        .EMIOGPIOI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .EMIOGPIOO({PS7_i_n_873,PS7_i_n_874,PS7_i_n_875,PS7_i_n_876,PS7_i_n_877,PS7_i_n_878,PS7_i_n_879,PS7_i_n_880,PS7_i_n_881,PS7_i_n_882,PS7_i_n_883,PS7_i_n_884,PS7_i_n_885,PS7_i_n_886,PS7_i_n_887,PS7_i_n_888,PS7_i_n_889,PS7_i_n_890,PS7_i_n_891,PS7_i_n_892,PS7_i_n_893,PS7_i_n_894,PS7_i_n_895,PS7_i_n_896,PS7_i_n_897,PS7_i_n_898,PS7_i_n_899,PS7_i_n_900,PS7_i_n_901,PS7_i_n_902,PS7_i_n_903,PS7_i_n_904,PS7_i_n_905,PS7_i_n_906,PS7_i_n_907,PS7_i_n_908,PS7_i_n_909,PS7_i_n_910,PS7_i_n_911,PS7_i_n_912,PS7_i_n_913,PS7_i_n_914,PS7_i_n_915,PS7_i_n_916,PS7_i_n_917,PS7_i_n_918,PS7_i_n_919,PS7_i_n_920,PS7_i_n_921,PS7_i_n_922,PS7_i_n_923,PS7_i_n_924,PS7_i_n_925,PS7_i_n_926,PS7_i_n_927,PS7_i_n_928,PS7_i_n_929,PS7_i_n_930,PS7_i_n_931,PS7_i_n_932,PS7_i_n_933,PS7_i_n_934,PS7_i_n_935,PS7_i_n_936}),
-        .EMIOGPIOTN(gpio_out_t_n),
+        .EMIOGPIOI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,GPIO_I}),
+        .EMIOGPIOO({NLW_PS7_i_EMIOGPIOO_UNCONNECTED[63:32],GPIO_O}),
+        .EMIOGPIOTN({NLW_PS7_i_EMIOGPIOTN_UNCONNECTED[63:32],gpio_out_t_n}),
         .EMIOI2C0SCLI(1'b0),
         .EMIOI2C0SCLO(PS7_i_n_44),
         .EMIOI2C0SCLTN(I2C0_SCL_T_n),
@@ -5201,17 +5211,17 @@ module top_bd_processing_system7_0_0_processing_system7_v5_5_processing_system7
         .EMIOSDIO1DATATN(SDIO1_DATA_T_n),
         .EMIOSDIO1LED(PS7_i_n_63),
         .EMIOSDIO1WP(1'b0),
-        .EMIOSPI0MI(1'b0),
-        .EMIOSPI0MO(PS7_i_n_64),
+        .EMIOSPI0MI(SPI0_MISO_I),
+        .EMIOSPI0MO(SPI0_MOSI_O),
         .EMIOSPI0MOTN(SPI0_MOSI_T_n),
-        .EMIOSPI0SCLKI(1'b0),
-        .EMIOSPI0SCLKO(PS7_i_n_66),
+        .EMIOSPI0SCLKI(SPI0_SCLK_I),
+        .EMIOSPI0SCLKO(SPI0_SCLK_O),
         .EMIOSPI0SCLKTN(SPI0_SCLK_T_n),
-        .EMIOSPI0SI(1'b0),
-        .EMIOSPI0SO(PS7_i_n_68),
-        .EMIOSPI0SSIN(1'b0),
+        .EMIOSPI0SI(SPI0_MOSI_I),
+        .EMIOSPI0SO(SPI0_MISO_O),
+        .EMIOSPI0SSIN(SPI0_SS_I),
         .EMIOSPI0SSNTN(SPI0_SS_T_n),
-        .EMIOSPI0SSON({PS7_i_n_327,PS7_i_n_328,PS7_i_n_329}),
+        .EMIOSPI0SSON({SPI0_SS2_O,SPI0_SS1_O,SPI0_SS_O}),
         .EMIOSPI0STN(SPI0_MISO_T_n),
         .EMIOSPI1MI(1'b0),
         .EMIOSPI1MO(PS7_i_n_71),
@@ -5679,6 +5689,26 @@ module top_bd_processing_system7_0_0_processing_system7_v5_5_processing_system7
   BIBUF PS_SRSTB_BIBUF
        (.IO(buffered_PS_SRSTB),
         .PAD(PS_SRSTB));
+  LUT1 #(
+    .INIT(2'h1)) 
+    SPI0_MISO_T_INST_0
+       (.I0(SPI0_MISO_T_n),
+        .O(SPI0_MISO_T));
+  LUT1 #(
+    .INIT(2'h1)) 
+    SPI0_MOSI_T_INST_0
+       (.I0(SPI0_MOSI_T_n),
+        .O(SPI0_MOSI_T));
+  LUT1 #(
+    .INIT(2'h1)) 
+    SPI0_SCLK_T_INST_0
+       (.I0(SPI0_SCLK_T_n),
+        .O(SPI0_SCLK_T));
+  LUT1 #(
+    .INIT(2'h1)) 
+    SPI0_SS_T_INST_0
+       (.I0(SPI0_SS_T_n),
+        .O(SPI0_SS_T));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG \buffer_fclk_clk_0.FCLK_CLK_0_BUFG 
        (.I(FCLK_CLK_unbuffered),

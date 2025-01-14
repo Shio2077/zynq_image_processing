@@ -18,9 +18,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_bd_rst_
 # IP: bd/top_bd/ip/top_bd_axi_mem_intercon_0/top_bd_axi_mem_intercon_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_bd_axi_mem_intercon_0 || ORIG_REF_NAME==top_bd_axi_mem_intercon_0} -quiet] -quiet
 
-# IP: bd/top_bd/ip/top_bd_image_process_0_0/top_bd_image_process_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_bd_image_process_0_0 || ORIG_REF_NAME==top_bd_image_process_0_0} -quiet] -quiet
-
 # IP: bd/top_bd/ip/top_bd_axi_vdma_0_0/top_bd_axi_vdma_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_bd_axi_vdma_0_0 || ORIG_REF_NAME==top_bd_axi_vdma_0_0} -quiet] -quiet
 
@@ -41,6 +38,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_bd_xlco
 
 # IP: bd/top_bd/ip/top_bd_DVI_Transmitter_0_0/top_bd_DVI_Transmitter_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_bd_DVI_Transmitter_0_0 || ORIG_REF_NAME==top_bd_DVI_Transmitter_0_0} -quiet] -quiet
+
+# IP: bd/top_bd/ip/top_bd_image_process_0_0/top_bd_image_process_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_bd_image_process_0_0 || ORIG_REF_NAME==top_bd_image_process_0_0} -quiet] -quiet
 
 # IP: bd/top_bd/ip/top_bd_vio_0_0/top_bd_vio_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_bd_vio_0_0 || ORIG_REF_NAME==top_bd_vio_0_0} -quiet] -quiet

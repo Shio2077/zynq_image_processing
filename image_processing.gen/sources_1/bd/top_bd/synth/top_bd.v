@@ -1,7 +1,7 @@
 //Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2.2 (win64) Build 3788238 Tue Feb 21 20:00:34 MST 2023
-//Date        : Sun Jan 12 20:19:04 2025
+//Date        : Tue Jan 14 18:02:13 2025
 //Host        : C88 running 64-bit major release  (build 9200)
 //Command     : generate_target top_bd.bd
 //Design      : top_bd
@@ -786,6 +786,7 @@ module top_bd
         .DDR_WEB(DDR_we_n),
         .FCLK_CLK0(processing_system7_0_FCLK_CLK0),
         .FCLK_RESET0_N(processing_system7_0_FCLK_RESET0_N),
+        .GPIO_I({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .MIO(FIXED_IO_mio[53:0]),
         .M_AXI_GP0_ACLK(processing_system7_0_FCLK_CLK0),
         .M_AXI_GP0_ARADDR(processing_system7_0_M_AXI_GP0_ARADDR),
@@ -829,6 +830,10 @@ module top_bd
         .PS_CLK(FIXED_IO_ps_clk),
         .PS_PORB(FIXED_IO_ps_porb),
         .PS_SRSTB(FIXED_IO_ps_srstb),
+        .SPI0_MISO_I(1'b0),
+        .SPI0_MOSI_I(1'b0),
+        .SPI0_SCLK_I(1'b0),
+        .SPI0_SS_I(1'b0),
         .S_AXI_HP0_ACLK(processing_system7_0_FCLK_CLK0),
         .S_AXI_HP0_ARADDR(axi_mem_intercon_M00_AXI_ARADDR),
         .S_AXI_HP0_ARBURST(axi_mem_intercon_M00_AXI_ARBURST),

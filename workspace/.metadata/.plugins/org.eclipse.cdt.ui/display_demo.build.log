@@ -1,4 +1,4 @@
-12:00:01 **** Incremental Build of configuration Release for project display_demo ****
+18:27:53 **** Incremental Build of configuration Release for project display_demo ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -17,9 +17,9 @@ arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size display_demo.elf  |tee "display_demo.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  31936	   2184	 944240	 978360	  eedb8	display_demo.elf
+  31936	 981384	  22640	1035960	  fceb8	display_demo.elf
 'Finished building: display_demo.elf.size'
 ' '
 
-12:00:02 Build Finished (took 605ms)
+18:27:55 Build Finished (took 2s.99ms)
 

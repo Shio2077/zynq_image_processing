@@ -56,9 +56,9 @@
       bit  ENET1_MDIO_I;
       bit  ENET1_EXT_INTIN;
       bit  [7 : 0] ENET1_GMII_RXD;
-      bit  [63 : 0] GPIO_I;
-      bit  [63 : 0] GPIO_O;
-      bit  [63 : 0] GPIO_T;
+      bit  [31 : 0] GPIO_I;
+      bit  [31 : 0] GPIO_O;
+      bit  [31 : 0] GPIO_T;
       bit  I2C0_SDA_I;
       bit  I2C0_SDA_O;
       bit  I2C0_SDA_T;
@@ -677,6 +677,23 @@
 
 //MODULE DECLARATION
  module top_bd_processing_system7_0_0 (
+  GPIO_I,
+  GPIO_O,
+  GPIO_T,
+  SPI0_SCLK_I,
+  SPI0_SCLK_O,
+  SPI0_SCLK_T,
+  SPI0_MOSI_I,
+  SPI0_MOSI_O,
+  SPI0_MOSI_T,
+  SPI0_MISO_I,
+  SPI0_MISO_O,
+  SPI0_MISO_T,
+  SPI0_SS_I,
+  SPI0_SS_O,
+  SPI0_SS1_O,
+  SPI0_SS2_O,
+  SPI0_SS_T,
   M_AXI_GP0_ARVALID,
   M_AXI_GP0_AWVALID,
   M_AXI_GP0_BREADY,
@@ -798,7 +815,7 @@
       parameter USE_TRACE_DATA_EDGE_DETECTOR = 0;
       parameter C_TRACE_PIPELINE_WIDTH = 8;
       parameter C_TRACE_BUFFER_CLOCK_DELAY = 12;
-      parameter C_EMIO_GPIO_WIDTH = 64;
+      parameter C_EMIO_GPIO_WIDTH = 32;
       parameter C_INCLUDE_ACP_TRANS_CHECK = 0;
       parameter C_USE_DEFAULT_ACP_USER_VAL = 0;
       parameter C_S_AXI_ACP_ARUSER_VAL = 31;
@@ -848,6 +865,23 @@
 
 //INPUT AND OUTPUT PORTS
 
+      input  [31 : 0] GPIO_I;
+      output  [31 : 0] GPIO_O;
+      output  [31 : 0] GPIO_T;
+      input  SPI0_SCLK_I;
+      output  SPI0_SCLK_O;
+      output  SPI0_SCLK_T;
+      input  SPI0_MOSI_I;
+      output  SPI0_MOSI_O;
+      output  SPI0_MOSI_T;
+      input  SPI0_MISO_I;
+      output  SPI0_MISO_O;
+      output  SPI0_MISO_T;
+      input  SPI0_SS_I;
+      output  SPI0_SS_O;
+      output  SPI0_SS1_O;
+      output  SPI0_SS2_O;
+      output  SPI0_SS_T;
       output  M_AXI_GP0_ARVALID;
       output  M_AXI_GP0_AWVALID;
       output  M_AXI_GP0_BREADY;
@@ -959,6 +993,18 @@
 
 //REG DECLARATIONS
 
+      reg [31 : 0] GPIO_O;
+      reg [31 : 0] GPIO_T;
+      reg SPI0_SCLK_O;
+      reg SPI0_SCLK_T;
+      reg SPI0_MOSI_O;
+      reg SPI0_MOSI_T;
+      reg SPI0_MISO_O;
+      reg SPI0_MISO_T;
+      reg SPI0_SS_O;
+      reg SPI0_SS1_O;
+      reg SPI0_SS2_O;
+      reg SPI0_SS_T;
       reg M_AXI_GP0_ARVALID;
       reg M_AXI_GP0_AWVALID;
       reg M_AXI_GP0_BREADY;

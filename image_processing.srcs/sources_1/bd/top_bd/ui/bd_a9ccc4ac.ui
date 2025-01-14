@@ -1,60 +1,60 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.1912",
-   "Default View_TopLeft":"-782,-770",
+   "Default View_ScaleFactor":"2.44985",
+   "Default View_TopLeft":"1004,-396",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 7 -x 1810 -y -350 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 7 -x 1810 -y -330 -defaultsOSRD
-preplace port TMDS_0 -pg 1 -lvl 7 -x 1810 -y 70 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 6 -x 1540 -y -210 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 5 -x 1070 -y -610 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 6 -x 1540 -y 360 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 7 -x 1850 -y -350 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 7 -x 1850 -y -330 -defaultsOSRD
+preplace port TMDS_0 -pg 1 -lvl 7 -x 1850 -y 70 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 6 -x 1580 -y -210 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 5 -x 1090 -y -610 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 6 -x 1580 -y 360 -defaultsOSRD
 preplace inst axi_mem_intercon -pg 1 -lvl 4 -x 570 -y -630 -defaultsOSRD
-preplace inst axi_vdma_0 -pg 1 -lvl 2 -x -230 -y 20 -defaultsOSRD
-preplace inst v_tc_0 -pg 1 -lvl 2 -x -230 -y -360 -defaultsOSRD
-preplace inst v_axi4s_vid_out_0 -pg 1 -lvl 5 -x 1070 -y 120 -defaultsOSRD
+preplace inst axi_vdma_0 -pg 1 -lvl 2 -x -220 -y 20 -defaultsOSRD
+preplace inst v_tc_0 -pg 1 -lvl 2 -x -220 -y -360 -defaultsOSRD
+preplace inst v_axi4s_vid_out_0 -pg 1 -lvl 5 -x 1090 -y 120 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -x -570 -y -340 -defaultsOSRD
 preplace inst util_vector_logic_0 -pg 1 -lvl 4 -x 570 -y 250 -defaultsOSRD
 preplace inst xlconstant_0 -pg 1 -lvl 4 -x 570 -y 420 -defaultsOSRD
-preplace inst DVI_Transmitter_0 -pg 1 -lvl 6 -x 1540 -y 80 -defaultsOSRD
+preplace inst DVI_Transmitter_0 -pg 1 -lvl 6 -x 1580 -y 80 -defaultsOSRD
 preplace inst image_process_0 -pg 1 -lvl 4 -x 570 -y 40 -defaultsOSRD
 preplace inst vio_0 -pg 1 -lvl 3 -x 140 -y 120 -defaultsOSRD
-preplace netloc axi_vdma_0_m_axis_mm2s_tdata 1 2 2 N -20 260
-preplace netloc axi_vdma_0_m_axis_mm2s_tlast 1 2 2 N 0 290
-preplace netloc axi_vdma_0_m_axis_mm2s_tuser 1 2 2 -10 10 300
+preplace netloc axi_vdma_0_m_axis_mm2s_tdata 1 2 2 20 -40 N
+preplace netloc axi_vdma_0_m_axis_mm2s_tlast 1 2 2 N 0 250
+preplace netloc axi_vdma_0_m_axis_mm2s_tuser 1 2 2 -10 10 280
 preplace netloc axi_vdma_0_m_axis_mm2s_tvalid 1 2 2 0 20 N
-preplace netloc clk_wiz_0_clk_out1 1 1 5 -460 -260 N -260 N -260 830 -70 1270
-preplace netloc clk_wiz_0_clk_out2 1 1 5 -480J -250 NJ -250 N -250 NJ -250 1280
-preplace netloc clk_wiz_0_locked 1 1 5 -470 -180 N -180 250 -140 810 -80 1260
+preplace netloc clk_wiz_0_clk_out1 1 1 5 -480 -490 N -490 N -490 820 -80 1290
+preplace netloc clk_wiz_0_clk_out2 1 1 5 -470J -480 NJ -480 N -480 NJ -480 1300
+preplace netloc clk_wiz_0_locked 1 1 5 -460 -460 N -460 240 340 880 390 1330
 preplace netloc image_process_0_video_stream_tdata_o 1 4 1 N 10
 preplace netloc image_process_0_video_stream_tlast_o 1 4 1 N 30
-preplace netloc image_process_0_video_stream_tready_o 1 2 3 -20J -130 N -130 800
-preplace netloc image_process_0_video_stream_tuser_o 1 4 1 850 50n
-preplace netloc image_process_0_video_stream_tvalid_o 1 4 1 820 70n
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 7 -720 -10 -460 160 10J 40 270 -760 880J -160 1290J -100 1790
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 5 2 1310 -10 1770
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 6 -430 -120 N -120 280 -750 840 310 1300 260 1770J
+preplace netloc image_process_0_video_stream_tready_o 1 2 3 -20J 320 N 320 800
+preplace netloc image_process_0_video_stream_tuser_o 1 4 1 830 50n
+preplace netloc image_process_0_video_stream_tvalid_o 1 4 1 810 70n
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 7 -720 -10 -480 160 10J 30 260 -760 870J -70 1320J -70 1820
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 5 2 1340 -60 1810
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 6 -450 170 20 40 270 -750 850 310 1310 -10 1810J
 preplace netloc util_vector_logic_0_Res 1 4 1 N 250
-preplace netloc v_axi4s_vid_out_0_s_axis_video_tready 1 3 2 310 -120 860
-preplace netloc v_axi4s_vid_out_0_vtg_ce 1 1 5 -450 -150 NJ -150 N -150 NJ -150 1250
-preplace netloc xlconstant_0_dout 1 4 1 880 150n
+preplace netloc v_axi4s_vid_out_0_s_axis_video_tready 1 3 2 280 310 840
+preplace netloc v_axi4s_vid_out_0_vtg_ce 1 1 5 -450 -470 NJ -470 N -470 NJ -470 1270
 preplace netloc vio_0_probe_out0 1 3 1 N 100
 preplace netloc vio_0_probe_out1 1 3 1 N 120
 preplace netloc vio_0_probe_out2 1 3 1 N 140
+preplace netloc xlconstant_0_dout 1 4 1 870 150n
 preplace netloc DVI_Transmitter_0_TMDS 1 6 1 NJ 70
-preplace netloc axi_mem_intercon_M00_AXI 1 4 2 800 -730 1290
-preplace netloc axi_vdma_0_M_AXIS_MM2S 1 2 2 N -40 240
-preplace netloc axi_vdma_0_M_AXI_MM2S 1 2 2 -30 -690 N
-preplace netloc processing_system7_0_DDR 1 6 1 1780J -350n
-preplace netloc processing_system7_0_FIXED_IO 1 6 1 1790J -330n
-preplace netloc processing_system7_0_M_AXI_GP0 1 4 3 890 -740 N -740 1770
-preplace netloc ps7_0_axi_periph_M00_AXI 1 1 5 -440 -170 NJ -170 N -170 NJ -170 1250
+preplace netloc axi_mem_intercon_M00_AXI 1 4 2 820 -730 1320
+preplace netloc axi_vdma_0_M_AXIS_MM2S 1 2 2 10 -60 N
+preplace netloc axi_vdma_0_M_AXI_MM2S 1 2 2 -10 -690 N
+preplace netloc processing_system7_0_DDR 1 6 1 1810J -350n
+preplace netloc processing_system7_0_FIXED_IO 1 6 1 1830J -330n
+preplace netloc processing_system7_0_M_AXI_GP0 1 4 3 880 -90 1310 -80 1830
+preplace netloc ps7_0_axi_periph_M00_AXI 1 1 5 -460 330 NJ 330 N 330 NJ 330 1280
 preplace netloc v_axi4s_vid_out_0_vid_io_out 1 5 1 N 50
-preplace netloc v_tc_0_vtiming_out 1 2 3 N -370 N -370 870
-levelinfo -pg 1 -740 -570 -230 140 570 1070 1540 1810
-pagesize -pg 1 -db -bbox -sgen -740 -950 1930 540
+preplace netloc v_tc_0_vtiming_out 1 2 3 N -370 N -370 860
+levelinfo -pg 1 -740 -570 -220 140 570 1090 1580 1850
+pagesize -pg 1 -db -bbox -sgen -740 -950 1970 740
 "
 }
 {

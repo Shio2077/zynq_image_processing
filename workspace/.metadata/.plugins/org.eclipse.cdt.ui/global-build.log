@@ -1,6 +1,10 @@
 Nothing to build in platform 'top'
 
-12:30:25 **** Incremental Build of configuration Debug for project display_demo ****
+18:27:53 **** Clean-only build of configuration Release for project display_demo ****
+make clean 
+rm -rf  ./src/main.o  ./includes/intr_io_init.o ./includes/lcd_drv.o ./includes/lcd_init.o ./includes/lcd_io_init.o ./includes/setup_intr.o  ./includes/intr_io_init.d ./includes/lcd_drv.d ./includes/lcd_init.d ./includes/lcd_io_init.d ./includes/setup_intr.d  ./src/main.d  display_demo.elf.size  display_demo.elf
+' '
+18:27:53 **** Incremental Build of configuration Release for project display_demo ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -8,7 +12,7 @@ a9-linaro-pre-build-step
 make --no-print-directory main-build
 'Building file: ../src/main.cpp'
 'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/Projects/prj/AMD/image_processing/workspace/top/export/top/sw/top/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+arm-none-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/Projects/prj/AMD/image_processing/workspace/top/export/top/sw/top/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
 'Finished building: ../src/main.cpp'
 ' '
 'Building target: display_demo.elf'
@@ -19,6 +23,6 @@ arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size display_demo.elf  |tee "display_demo.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  32060	   2184	 944240	 978484	  eee34	display_demo.elf
+  31936	 981384	  22640	1035960	  fceb8	display_demo.elf
 'Finished building: display_demo.elf.size'
 ' '

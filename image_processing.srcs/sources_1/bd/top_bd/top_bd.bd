@@ -30,8 +30,8 @@
       "util_vector_logic_0": "",
       "xlconstant_0": "",
       "DVI_Transmitter_0": "",
-      "image_process_0": "",
-      "vio_0": ""
+      "vio_0": "",
+      "image_process_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1154,6 +1154,38 @@
         "xci_path": "ip\\top_bd_DVI_Transmitter_0_0\\top_bd_DVI_Transmitter_0_0.xci",
         "inst_hier_path": "DVI_Transmitter_0"
       },
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "xci_name": "top_bd_vio_0_0",
+        "xci_path": "ip\\top_bd_vio_0_0\\top_bd_vio_0_0.xci",
+        "inst_hier_path": "vio_0",
+        "parameters": {
+          "C_NUM_PROBE_IN": {
+            "value": "0"
+          },
+          "C_NUM_PROBE_OUT": {
+            "value": "3"
+          },
+          "C_PROBE_OUT0_INIT_VAL": {
+            "value": "0x20"
+          },
+          "C_PROBE_OUT0_WIDTH": {
+            "value": "8"
+          },
+          "C_PROBE_OUT1_INIT_VAL": {
+            "value": "0x20"
+          },
+          "C_PROBE_OUT1_WIDTH": {
+            "value": "8"
+          },
+          "C_PROBE_OUT2_INIT_VAL": {
+            "value": "0x20"
+          },
+          "C_PROBE_OUT2_WIDTH": {
+            "value": "8"
+          }
+        }
+      },
       "image_process_0": {
         "vlnv": "xilinx.com:module_ref:image_process:1.0",
         "xci_name": "top_bd_image_process_0_0",
@@ -1352,38 +1384,6 @@
             "right": "0"
           }
         }
-      },
-      "vio_0": {
-        "vlnv": "xilinx.com:ip:vio:3.0",
-        "xci_name": "top_bd_vio_0_0",
-        "xci_path": "ip\\top_bd_vio_0_0\\top_bd_vio_0_0.xci",
-        "inst_hier_path": "vio_0",
-        "parameters": {
-          "C_NUM_PROBE_IN": {
-            "value": "0"
-          },
-          "C_NUM_PROBE_OUT": {
-            "value": "3"
-          },
-          "C_PROBE_OUT0_INIT_VAL": {
-            "value": "0x10"
-          },
-          "C_PROBE_OUT0_WIDTH": {
-            "value": "8"
-          },
-          "C_PROBE_OUT1_INIT_VAL": {
-            "value": "0x10"
-          },
-          "C_PROBE_OUT1_WIDTH": {
-            "value": "8"
-          },
-          "C_PROBE_OUT2_INIT_VAL": {
-            "value": "0x10"
-          },
-          "C_PROBE_OUT2_WIDTH": {
-            "value": "8"
-          }
-        }
       }
     },
     "interface_nets": {
@@ -1544,8 +1544,8 @@
           "rst_ps7_0_100M/slowest_sync_clk",
           "v_axi4s_vid_out_0/aclk",
           "clk_wiz_0/clk_in1",
-          "image_process_0/aclk",
-          "vio_0/clk"
+          "vio_0/clk",
+          "image_process_0/aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {

@@ -93,3 +93,14 @@ platform clean
 platform generate
 platform clean
 platform generate
+platform active {top}
+platform config -updatehw {D:/Projects/prj/AMD/image_processing/top_bd_wrapper.xsa}
+platform generate -domains 
+platform clean
+platform config -updatehw {D:/Projects/prj/AMD/image_processing/top.xsa}
+platform generate
+platform clean
+platform generate
+platform active {top}
+platform config -updatehw {D:/Projects/prj/AMD/image_processing/top.xsa}
+platform generate

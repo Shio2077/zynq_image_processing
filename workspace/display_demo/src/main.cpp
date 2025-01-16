@@ -18,7 +18,7 @@ int main(){
     // Task 1: Display white screen
 	unsigned char *p_img;
 	p_img = image;
-	memset(p_img, 0xB3, IMG_WIDTH*IMG_HEIGHT*BYTES4PX);
+	//memset(p_img, 0xB3, IMG_WIDTH*IMG_HEIGHT*BYTES4PX);
     Xil_DCacheFlush();
 
 	// Task 2: Configure VDMA controller to fetch image data to PL

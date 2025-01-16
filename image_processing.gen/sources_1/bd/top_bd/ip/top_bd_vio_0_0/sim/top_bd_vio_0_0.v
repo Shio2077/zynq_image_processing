@@ -56,9 +56,9 @@ probe_out2
 
 input clk;
 
-output reg [7 : 0] probe_out0 = 'h10 ;
-output reg [7 : 0] probe_out1 = 'h10 ;
-output reg [7 : 0] probe_out2 = 'h10 ;
+output reg [7 : 0] probe_out0 = 'h20 ;
+output reg [7 : 0] probe_out1 = 'h20 ;
+output reg [7 : 0] probe_out2 = 'h20 ;
 
 
 endmodule

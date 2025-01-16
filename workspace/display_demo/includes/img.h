@@ -1,7 +1,7 @@
 #ifndef _IMG_H_
 #define _IMG_H_
 
-unsigned char image[]={
+unsigned char image[680*480*3]={
 5,
 5,
 5,

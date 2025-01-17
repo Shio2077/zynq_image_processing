@@ -5,7 +5,7 @@
 #include<xil_io.h>
 #include<xparameters.h>
 #include"defines.h"
-#include"../includes/img.h"
+#include"img.h"
 
 
 
@@ -16,7 +16,7 @@
 
 int main(){
     // Task 1: Display white screen
-	unsigned char *p_img;
+	const unsigned char *p_img;
 	p_img = image;
 	//memset(p_img, 0xB3, IMG_WIDTH*IMG_HEIGHT*BYTES4PX);
     Xil_DCacheFlush();

@@ -1,0 +1,12 @@
+#define IMG_WIDTH       640
+#define IMG_HEIGHT      480
+#define TOTAL_BYTES     IMG_WIDTH*IMG_HEIGHT*3
+
+#define BYTES4PX         3
+#define MM2SCR_OFFSET   0x00
+#define MM2SSA1_OFFSET  0x5C
+#define MM2SSA2_OFFSET  0x60
+#define MM2SSA3_OFFSET  0x64
+#define MM2SSTD_OFFSET  0x58
+#define MM2SHZ_OFFSET   0x54
+#define MM2SVZ_OFFSET   0x50

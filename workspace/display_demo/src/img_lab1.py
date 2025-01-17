@@ -22,8 +22,12 @@ th_r, th_g, th_b = 70, 70, 70
 with open('img.h', 'w') as f:
     f.write('#ifndef _IMG_H_\n')
     f.write('#define _IMG_H_\n')
-    f.write('u8 image[TOTAL_BYTES]={\n')
-    for byte_pixel in img.flatten():
-        f.write(str(byte_pixel) + ',\n')
+    f.write('unsigned char image[640*480*3]={\n')
+    for i in range (h):
+        for j in range(w):
+            f.write(str(img[i, j, 0]) + ',')
+            f.write(str(img[i, j, 1]) + ',')
+            f.write(str(img[i, j, 2]) + ',')
+    f.seek(f.tell()-1)
     f.write('};')
-    f.write('#endif\n')
+    f.write('\n#endif\n')

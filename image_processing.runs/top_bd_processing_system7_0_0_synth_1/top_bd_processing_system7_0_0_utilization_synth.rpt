@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2.2 (win64) Build 3788238 Tue Feb 21 20:00:34 MST 2023
-| Date         : Tue Jan 14 17:59:31 2025
+| Date         : Fri Jan 17 14:40:59 2025
 | Host         : C88 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_bd_processing_system7_0_0_utilization_synth.rpt -pb top_bd_processing_system7_0_0_utilization_synth.pb
 | Design       : top_bd_processing_system7_0_0

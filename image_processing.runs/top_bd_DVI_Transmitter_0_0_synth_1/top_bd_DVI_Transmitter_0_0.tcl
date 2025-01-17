@@ -70,9 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "top_bd_DVI_Transmitter_0_0_synth_1" START { ROLLUP_AUTO }
-set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 4
-set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
@@ -96,7 +94,7 @@ set_property ip_output_repo d:/Projects/prj/AMD/image_processing/image_processin
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/Projects/prj/AMD/image_processing/image_processing.srcs/sources_1/bd/top_bd/ip/top_bd_DVI_Transmitter_0_0/top_bd_DVI_Transmitter_0_0.xci
+read_ip -quiet D:/Projects/prj/AMD/image_processing/image_processing.srcs/sources_1/bd/top_bd/ip/top_bd_DVI_Transmitter_0_0/top_bd_DVI_Transmitter_0_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

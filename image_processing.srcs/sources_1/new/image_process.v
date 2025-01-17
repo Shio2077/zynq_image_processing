@@ -52,8 +52,8 @@ module image_process(
     
 
     wire                if_th;
-    assign        if_th = (video_stream_tdata_i[23:16] < th_r) && (video_stream_tdata_i[15:8] < th_g) && (video_stream_tdata_i[7:0] > th_b);
+    assign        if_th = (video_stream_tdata_i[23:16] < th_r) && (video_stream_tdata_i[15:8] < th_g) && (video_stream_tdata_i[7:0] < th_b);
 
-    assign        video_stream_tdata_o = video_stream_tdata_i;//if_th ? 24'hffffff : 24'h000000;
+    assign        video_stream_tdata_o = if_th ? 24'hffffff : 24'h000000;
 
 endmodule

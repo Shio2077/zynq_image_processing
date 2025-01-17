@@ -22,8 +22,4 @@ targets -set -nocase -filter {name =~"APU*"}
 source D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl
 ps7_init
 ps7_post_config
-targets -set -nocase -filter {name =~ "*A9*#0"}
-dow D:/Projects/prj/AMD/image_processing/workspace/display_demo/Debug/display_demo.elf
 configparams force-mem-access 0
-targets -set -nocase -filter {name =~ "*A9*#0"}
-con

@@ -104,3 +104,9 @@ platform generate
 platform active {top}
 platform config -updatehw {D:/Projects/prj/AMD/image_processing/top.xsa}
 platform generate
+platform generate
+platform active {top}
+platform config -updatehw {D:/Projects/prj/AMD/image_processing/top.xsa}
+platform generate -domains 
+platform config -updatehw {D:/Projects/prj/AMD/image_processing/top.xsa}
+platform generate -domains 

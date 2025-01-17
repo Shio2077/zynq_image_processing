@@ -3128,3 +3128,592 @@ con
 
 19:27:44 INFO  : Launch script is exported to file 'D:\Projects\prj\AMD\image_processing\workspace\display_demo_system\_ide\scripts\debugger_display_demo-default.tcl'
 21:38:03 INFO  : Disconnected from the channel tcfchan#3.
+11:33:15 DEBUG : Logs will be stored at 'D:/Projects/prj/AMD/image_processing/workspace/IDE.log'.
+11:33:15 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\Projects\prj\AMD\image_processing\workspace\temp_xsdb_launch_script.tcl
+11:33:19 INFO  : Registering command handlers for Vitis TCF services
+11:33:19 INFO  : XSCT server has started successfully.
+11:33:19 INFO  : Platform repository initialization has completed.
+11:33:23 INFO  : Successfully done setting XSCT server connection channel  
+11:33:23 INFO  : plnx-install-location is set to ''
+11:33:23 INFO  : Successfully done query RDI_DATADIR 
+11:33:23 INFO  : Successfully done setting workspace for the tool. 
+12:17:46 DEBUG : Logs will be stored at 'D:/Projects/prj/AMD/image_processing/workspace/IDE.log'.
+12:17:47 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\Projects\prj\AMD\image_processing\workspace\temp_xsdb_launch_script.tcl
+12:17:49 INFO  : XSCT server has started successfully.
+12:17:49 INFO  : plnx-install-location is set to ''
+12:17:49 INFO  : Successfully done setting XSCT server connection channel  
+12:17:49 INFO  : Successfully done setting workspace for the tool. 
+12:18:29 INFO  : Successfully done query RDI_DATADIR 
+12:18:30 INFO  : Registering command handlers for Vitis TCF services
+12:18:30 INFO  : Platform repository initialization has completed.
+12:25:11 INFO  : Checking for BSP changes to sync application flags for project 'display_demo'...
+12:25:29 INFO  : Checking for BSP changes to sync application flags for project 'display_demo'...
+12:25:45 INFO  : Build configuration of 'display_demo_system' is updated to 'Release'
+12:25:45 INFO  : Build configuration of system project is automatically updated to 'Release'.
+12:25:47 INFO  : Build configuration of 'display_demo_system' is updated to 'Debug'
+12:25:47 INFO  : Build configuration of system project is automatically updated to 'Debug'.
+12:25:47 INFO  : Checking for BSP changes to sync application flags for project 'display_demo'...
+12:25:50 INFO  : Build configuration of 'display_demo_system' is updated to 'Release'
+12:25:50 INFO  : Build configuration of system project is automatically updated to 'Release'.
+12:25:51 INFO  : Checking for BSP changes to sync application flags for project 'display_demo'...
+12:25:56 INFO  : Build configuration of 'display_demo_system' is updated to 'Debug'
+12:25:56 INFO  : Build configuration of system project is automatically updated to 'Debug'.
+12:25:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:25:59 INFO  : Jtag cable 'Digilent JTAG-SMT3 210357A7D00EA' is selected.
+12:25:59 INFO  : 'jtag frequency' command is executed.
+12:25:59 INFO  : Context for 'APU' is selected.
+12:25:59 INFO  : System reset is completed.
+12:26:02 INFO  : 'after 3000' command is executed.
+12:26:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}' command is executed.
+12:26:05 INFO  : Device configured successfully with "D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit"
+12:26:05 INFO  : Context for 'APU' is selected.
+12:26:05 INFO  : Hardware design and registers information is loaded from 'D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa'.
+12:26:05 INFO  : 'configparams force-mem-access 1' command is executed.
+12:26:05 INFO  : Context for 'APU' is selected.
+12:26:05 INFO  : Sourcing of 'D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl' is done.
+12:26:05 INFO  : 'ps7_init' command is executed.
+12:26:05 INFO  : 'ps7_post_config' command is executed.
+12:26:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:26:07 INFO  : The application 'D:/Projects/prj/AMD/image_processing/workspace/display_demo/Debug/display_demo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:26:07 INFO  : 'configparams force-mem-access 0' command is executed.
+12:26:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}
+fpga -file D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/prj/AMD/image_processing/workspace/display_demo/Debug/display_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:26:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:26:07 INFO  : 'con' command is executed.
+12:26:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:26:07 INFO  : Launch script is exported to file 'D:\Projects\prj\AMD\image_processing\workspace\display_demo_system\_ide\scripts\debugger_display_demo-default.tcl'
+12:28:10 DEBUG : Logs will be stored at 'D:/Projects/prj/AMD/image_processing/workspace/IDE.log'.
+12:28:10 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\Projects\prj\AMD\image_processing\workspace\temp_xsdb_launch_script.tcl
+12:28:13 INFO  : XSCT server has started successfully.
+12:28:13 INFO  : Successfully done setting XSCT server connection channel  
+12:28:13 INFO  : plnx-install-location is set to ''
+12:28:13 INFO  : Successfully done setting workspace for the tool. 
+12:28:55 INFO  : Successfully done query RDI_DATADIR 
+12:28:55 INFO  : Registering command handlers for Vitis TCF services
+12:28:55 INFO  : Platform repository initialization has completed.
+12:29:03 INFO  : Checking for BSP changes to sync application flags for project 'display_demo'...
+12:29:06 INFO  : Build configuration of 'display_demo_system' is updated to 'Release'
+12:29:06 INFO  : Build configuration of system project is automatically updated to 'Release'.
+12:29:06 INFO  : Checking for BSP changes to sync application flags for project 'display_demo'...
+12:29:09 INFO  : Build configuration of 'display_demo_system' is updated to 'Debug'
+12:29:09 INFO  : Build configuration of system project is automatically updated to 'Debug'.
+12:29:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:29:13 INFO  : Jtag cable 'Digilent JTAG-SMT3 210357A7D00EA' is selected.
+12:29:13 INFO  : 'jtag frequency' command is executed.
+12:29:13 INFO  : Context for 'APU' is selected.
+12:29:13 INFO  : System reset is completed.
+12:29:16 INFO  : 'after 3000' command is executed.
+12:29:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}' command is executed.
+12:29:19 INFO  : Device configured successfully with "D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit"
+12:29:19 INFO  : Context for 'APU' is selected.
+12:29:19 INFO  : Hardware design and registers information is loaded from 'D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa'.
+12:29:19 INFO  : 'configparams force-mem-access 1' command is executed.
+12:29:19 INFO  : Context for 'APU' is selected.
+12:29:19 INFO  : Sourcing of 'D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl' is done.
+12:29:19 INFO  : 'ps7_init' command is executed.
+12:29:19 INFO  : 'ps7_post_config' command is executed.
+12:29:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:29:21 INFO  : The application 'D:/Projects/prj/AMD/image_processing/workspace/display_demo/Debug/display_demo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:29:21 INFO  : 'configparams force-mem-access 0' command is executed.
+12:29:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}
+fpga -file D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/prj/AMD/image_processing/workspace/display_demo/Debug/display_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:29:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:29:21 INFO  : 'con' command is executed.
+12:29:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:29:21 INFO  : Launch script is exported to file 'D:\Projects\prj\AMD\image_processing\workspace\display_demo_system\_ide\scripts\debugger_display_demo-default.tcl'
+13:16:52 INFO  : Checking for BSP changes to sync application flags for project 'display_demo'...
+13:16:57 INFO  : Disconnected from the channel tcfchan#1.
+13:16:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:16:58 INFO  : Jtag cable 'Digilent JTAG-SMT3 210357A7D00EA' is selected.
+13:16:58 INFO  : 'jtag frequency' command is executed.
+13:16:59 INFO  : Context for 'APU' is selected.
+13:16:59 INFO  : System reset is completed.
+13:17:02 INFO  : 'after 3000' command is executed.
+13:17:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}' command is executed.
+13:17:05 INFO  : Device configured successfully with "D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit"
+13:17:05 INFO  : Context for 'APU' is selected.
+13:17:07 INFO  : Hardware design and registers information is loaded from 'D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa'.
+13:17:07 INFO  : 'configparams force-mem-access 1' command is executed.
+13:17:07 INFO  : Context for 'APU' is selected.
+13:17:07 INFO  : Sourcing of 'D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl' is done.
+13:17:07 INFO  : 'ps7_init' command is executed.
+13:17:07 INFO  : 'ps7_post_config' command is executed.
+13:17:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:17:09 INFO  : The application 'D:/Projects/prj/AMD/image_processing/workspace/display_demo/Debug/display_demo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:17:09 INFO  : 'configparams force-mem-access 0' command is executed.
+13:17:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}
+fpga -file D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/prj/AMD/image_processing/workspace/display_demo/Debug/display_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:17:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:17:09 INFO  : 'con' command is executed.
+13:17:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:17:09 INFO  : Launch script is exported to file 'D:\Projects\prj\AMD\image_processing\workspace\display_demo_system\_ide\scripts\debugger_display_demo-default.tcl'
+13:17:21 INFO  : Build configuration of 'display_demo_system' is updated to 'Release'
+13:17:21 INFO  : Build configuration of system project is automatically updated to 'Release'.
+13:17:21 INFO  : Checking for BSP changes to sync application flags for project 'display_demo'...
+13:18:18 INFO  : Build configuration of 'display_demo_system' is updated to 'Debug'
+13:18:18 INFO  : Build configuration of system project is automatically updated to 'Debug'.
+13:18:18 INFO  : Checking for BSP changes to sync application flags for project 'display_demo'...
+13:18:44 INFO  : Checking for BSP changes to sync application flags for project 'display_demo'...
+13:18:50 INFO  : Disconnected from the channel tcfchan#2.
+13:19:32 DEBUG : Logs will be stored at 'D:/Projects/prj/AMD/image_processing/workspace/IDE.log'.
+13:19:32 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\Projects\prj\AMD\image_processing\workspace\temp_xsdb_launch_script.tcl
+13:19:35 INFO  : XSCT server has started successfully.
+13:19:35 INFO  : plnx-install-location is set to ''
+13:19:35 INFO  : Successfully done setting XSCT server connection channel  
+13:19:35 INFO  : Successfully done setting workspace for the tool. 
+13:19:35 INFO  : Registering command handlers for Vitis TCF services
+13:19:36 INFO  : Platform repository initialization has completed.
+13:19:37 INFO  : Checking for BSP changes to sync application flags for project 'display_demo'...
+13:19:39 INFO  : Successfully done query RDI_DATADIR 
+13:20:11 INFO  : Checking for BSP changes to sync application flags for project 'display_demo'...
+13:20:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:20:32 INFO  : Jtag cable 'Digilent JTAG-SMT3 210357A7D00EA' is selected.
+13:20:32 INFO  : 'jtag frequency' command is executed.
+13:20:32 INFO  : Context for 'APU' is selected.
+13:20:32 INFO  : System reset is completed.
+13:20:35 INFO  : 'after 3000' command is executed.
+13:20:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}' command is executed.
+13:20:37 INFO  : Device configured successfully with "D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit"
+13:20:37 INFO  : Context for 'APU' is selected.
+13:20:37 INFO  : Hardware design and registers information is loaded from 'D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa'.
+13:20:37 INFO  : 'configparams force-mem-access 1' command is executed.
+13:20:37 INFO  : Context for 'APU' is selected.
+13:20:37 INFO  : Sourcing of 'D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl' is done.
+13:20:37 INFO  : 'ps7_init' command is executed.
+13:20:37 INFO  : 'ps7_post_config' command is executed.
+13:20:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:20:39 INFO  : The application 'D:/Projects/prj/AMD/image_processing/workspace/display_demo/Debug/display_demo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:20:39 INFO  : 'configparams force-mem-access 0' command is executed.
+13:20:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}
+fpga -file D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/prj/AMD/image_processing/workspace/display_demo/Debug/display_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:20:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:20:39 INFO  : 'con' command is executed.
+13:20:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:20:39 INFO  : Launch script is exported to file 'D:\Projects\prj\AMD\image_processing\workspace\display_demo_system\_ide\scripts\debugger_display_demo-default.tcl'
+13:24:05 DEBUG : Logs will be stored at 'D:/Projects/prj/AMD/image_processing/workspace/IDE.log'.
+13:25:21 DEBUG : Logs will be stored at 'D:/Projects/prj/AMD/image_processing/workspace/IDE.log'.
+13:27:58 DEBUG : Logs will be stored at 'D:/Projects/prj/AMD/image_processing/workspace/IDE.log'.
+13:29:18 DEBUG : Logs will be stored at 'D:/Projects/prj/AMD/image_processing/workspace/IDE.log'.
+13:30:45 DEBUG : Logs will be stored at 'D:/Projects/prj/AMD/image_processing/workspace/IDE.log'.
+13:34:00 DEBUG : Logs will be stored at 'D:/Projects/prj/AMD/image_processing/workspace/IDE.log'.
+13:35:05 DEBUG : Logs will be stored at 'D:/Projects/prj/AMD/image_processing/workspace/IDE.log'.
+14:05:32 DEBUG : Logs will be stored at 'D:/Projects/prj/AMD/image_processing/workspace/IDE.log'.
+14:21:06 DEBUG : Logs will be stored at 'D:/Projects/prj/AMD/image_processing/workspace/IDE.log'.
+14:23:28 DEBUG : Logs will be stored at 'D:/Projects/prj/AMD/image_processing/workspace/IDE.log'.
+14:26:34 DEBUG : Logs will be stored at 'D:/Projects/prj/AMD/image_processing/workspace/IDE.log'.
+14:26:35 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\Projects\prj\AMD\image_processing\workspace\temp_xsdb_launch_script.tcl
+14:26:38 INFO  : Registering command handlers for Vitis TCF services
+14:26:39 INFO  : Platform repository initialization has completed.
+14:26:39 INFO  : XSCT server has started successfully.
+14:26:42 INFO  : Successfully done setting XSCT server connection channel  
+14:26:42 INFO  : plnx-install-location is set to ''
+14:26:42 INFO  : Successfully done query RDI_DATADIR 
+14:26:42 INFO  : Successfully done setting workspace for the tool. 
+14:27:43 INFO  : Result from executing command 'getProjects': top
+14:27:44 INFO  : Result from executing command 'getPlatforms': top|D:/Projects/prj/AMD/image_processing/workspace/top/export/top/top.xpfm;xilinx_vck190_base_202220_1|D:/AMD/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|D:/AMD/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|D:/AMD/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|D:/AMD/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|D:/AMD/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|D:/AMD/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+14:27:44 INFO  : Checking for BSP changes to sync application flags for project 'display_demo'...
+14:28:53 INFO  : Build configuration of 'display_demo_system' is updated to 'Release'
+14:28:53 INFO  : Build configuration of system project is automatically updated to 'Release'.
+14:28:55 INFO  : Build configuration of 'display_demo_system' is updated to 'Debug'
+14:28:55 INFO  : Build configuration of system project is automatically updated to 'Debug'.
+14:28:55 INFO  : Checking for BSP changes to sync application flags for project 'display_demo'...
+14:29:44 INFO  : Checking for BSP changes to sync application flags for project 'display_demo'...
+14:29:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:29:53 INFO  : Jtag cable 'Digilent JTAG-SMT3 210357A7D00EA' is selected.
+14:29:53 INFO  : 'jtag frequency' command is executed.
+14:29:53 INFO  : Context for 'APU' is selected.
+14:29:53 INFO  : System reset is completed.
+14:29:56 INFO  : 'after 3000' command is executed.
+14:29:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}' command is executed.
+14:29:59 INFO  : Device configured successfully with "D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit"
+14:29:59 INFO  : Context for 'APU' is selected.
+14:29:59 INFO  : Hardware design and registers information is loaded from 'D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa'.
+14:29:59 INFO  : 'configparams force-mem-access 1' command is executed.
+14:29:59 INFO  : Context for 'APU' is selected.
+14:29:59 INFO  : Sourcing of 'D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl' is done.
+14:30:00 INFO  : 'ps7_init' command is executed.
+14:30:00 INFO  : 'ps7_post_config' command is executed.
+14:30:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:30:02 INFO  : The application 'D:/Projects/prj/AMD/image_processing/workspace/display_demo/Debug/display_demo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:30:02 INFO  : 'configparams force-mem-access 0' command is executed.
+14:30:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}
+fpga -file D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/prj/AMD/image_processing/workspace/display_demo/Debug/display_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:30:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:30:02 INFO  : 'con' command is executed.
+14:30:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:30:02 INFO  : Launch script is exported to file 'D:\Projects\prj\AMD\image_processing\workspace\display_demo_system\_ide\scripts\debugger_display_demo-default.tcl'
+14:33:56 INFO  : Disconnected from the channel tcfchan#2.
+14:46:32 DEBUG : Logs will be stored at 'D:/Projects/prj/AMD/image_processing/workspace/IDE.log'.
+14:46:32 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\Projects\prj\AMD\image_processing\workspace\temp_xsdb_launch_script.tcl
+14:46:35 INFO  : XSCT server has started successfully.
+14:46:36 INFO  : Registering command handlers for Vitis TCF services
+14:46:36 INFO  : Platform repository initialization has completed.
+14:46:38 INFO  : Successfully done setting XSCT server connection channel  
+14:46:38 INFO  : plnx-install-location is set to ''
+14:46:38 INFO  : Successfully done query RDI_DATADIR 
+14:46:38 INFO  : Successfully done setting workspace for the tool. 
+14:46:44 INFO  : Checking for BSP changes to sync application flags for project 'display_demo'...
+14:46:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:46:54 INFO  : Jtag cable 'Digilent JTAG-SMT3 210357A7D00EA' is selected.
+14:46:54 INFO  : 'jtag frequency' command is executed.
+14:46:54 INFO  : Context for 'APU' is selected.
+14:46:54 INFO  : System reset is completed.
+14:46:57 INFO  : 'after 3000' command is executed.
+14:46:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}' command is executed.
+14:47:00 INFO  : Device configured successfully with "D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit"
+14:47:00 INFO  : Context for 'APU' is selected.
+14:47:00 INFO  : Hardware design and registers information is loaded from 'D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa'.
+14:47:00 INFO  : 'configparams force-mem-access 1' command is executed.
+14:47:00 INFO  : Context for 'APU' is selected.
+14:47:00 INFO  : Sourcing of 'D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl' is done.
+14:47:00 INFO  : 'ps7_init' command is executed.
+14:47:00 INFO  : 'ps7_post_config' command is executed.
+14:47:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:47:02 INFO  : The application 'D:/Projects/prj/AMD/image_processing/workspace/display_demo/Debug/display_demo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:47:02 INFO  : 'configparams force-mem-access 0' command is executed.
+14:47:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}
+fpga -file D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/prj/AMD/image_processing/workspace/display_demo/Debug/display_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:47:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:47:02 INFO  : 'con' command is executed.
+14:47:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:47:02 INFO  : Launch script is exported to file 'D:\Projects\prj\AMD\image_processing\workspace\display_demo_system\_ide\scripts\debugger_display_demo-default.tcl'
+14:47:21 INFO  : Hardware specification for platform project 'top' is updated.
+14:47:29 INFO  : Disconnected from the channel tcfchan#1.
+14:47:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:47:30 INFO  : Jtag cable 'Digilent JTAG-SMT3 210357A7D00EA' is selected.
+14:47:30 ERROR : port closed
+14:47:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+14:47:30 ERROR : port closed
+14:47:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:47:36 INFO  : Jtag cable 'Digilent JTAG-SMT3 210357A7D00EA' is selected.
+14:47:36 INFO  : 'jtag frequency' command is executed.
+14:47:36 INFO  : Context for 'APU' is selected.
+14:47:36 INFO  : System reset is completed.
+14:47:39 INFO  : 'after 3000' command is executed.
+14:47:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}' command is executed.
+14:47:41 INFO  : Device configured successfully with "D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit"
+14:47:41 INFO  : Context for 'APU' is selected.
+14:47:43 INFO  : Hardware design and registers information is loaded from 'D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa'.
+14:47:43 INFO  : 'configparams force-mem-access 1' command is executed.
+14:47:43 INFO  : Context for 'APU' is selected.
+14:47:43 INFO  : Sourcing of 'D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl' is done.
+14:47:43 INFO  : 'ps7_init' command is executed.
+14:47:43 INFO  : 'ps7_post_config' command is executed.
+14:47:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:47:45 INFO  : The application 'D:/Projects/prj/AMD/image_processing/workspace/display_demo/Debug/display_demo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:47:45 INFO  : 'configparams force-mem-access 0' command is executed.
+14:47:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}
+fpga -file D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/prj/AMD/image_processing/workspace/display_demo/Debug/display_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:47:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:47:45 INFO  : 'con' command is executed.
+14:47:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:47:45 INFO  : Launch script is exported to file 'D:\Projects\prj\AMD\image_processing\workspace\display_demo_system\_ide\scripts\debugger_display_demo-default.tcl'
+14:48:17 INFO  : Result from executing command 'getProjects': top
+14:48:17 INFO  : Result from executing command 'getPlatforms': top|D:/Projects/prj/AMD/image_processing/workspace/top/export/top/top.xpfm;xilinx_vck190_base_202220_1|D:/AMD/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|D:/AMD/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|D:/AMD/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|D:/AMD/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|D:/AMD/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|D:/AMD/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+14:48:17 INFO  : Checking for BSP changes to sync application flags for project 'display_demo'...
+14:48:25 INFO  : Disconnected from the channel tcfchan#2.
+14:48:26 INFO  : The hardware specification used by project 'display_demo' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+14:48:26 INFO  : The file 'D:\Projects\prj\AMD\image_processing\workspace\display_demo\_ide\bitstream\top.bit' stored in project is removed.
+14:48:26 INFO  : The updated bitstream files are copied from platform to folder 'D:\Projects\prj\AMD\image_processing\workspace\display_demo\_ide\bitstream' in project 'display_demo'.
+14:48:26 INFO  : The file 'D:\Projects\prj\AMD\image_processing\workspace\display_demo\_ide\psinit\ps7_init.tcl' stored in project is removed.
+14:48:29 INFO  : The updated ps init files are copied from platform to folder 'D:\Projects\prj\AMD\image_processing\workspace\display_demo\_ide\psinit' in project 'display_demo'.
+14:48:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:48:30 INFO  : Jtag cable 'Digilent JTAG-SMT3 210357A7D00EA' is selected.
+14:48:30 INFO  : 'jtag frequency' command is executed.
+14:48:30 INFO  : Context for 'APU' is selected.
+14:48:30 INFO  : System reset is completed.
+14:48:33 INFO  : 'after 3000' command is executed.
+14:48:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}' command is executed.
+14:48:35 INFO  : Device configured successfully with "D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit"
+14:48:35 INFO  : Context for 'APU' is selected.
+14:48:35 INFO  : Hardware design and registers information is loaded from 'D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa'.
+14:48:35 INFO  : 'configparams force-mem-access 1' command is executed.
+14:48:35 INFO  : Context for 'APU' is selected.
+14:48:35 INFO  : Sourcing of 'D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl' is done.
+14:48:35 INFO  : 'ps7_init' command is executed.
+14:48:36 INFO  : 'ps7_post_config' command is executed.
+14:48:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:48:37 INFO  : The application 'D:/Projects/prj/AMD/image_processing/workspace/display_demo/Debug/display_demo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:48:38 INFO  : 'configparams force-mem-access 0' command is executed.
+14:48:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}
+fpga -file D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/prj/AMD/image_processing/workspace/display_demo/Debug/display_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:48:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:48:38 INFO  : 'con' command is executed.
+14:48:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:48:38 INFO  : Launch script is exported to file 'D:\Projects\prj\AMD\image_processing\workspace\display_demo_system\_ide\scripts\debugger_display_demo-default.tcl'
+19:32:03 INFO  : Hardware specification for platform project 'top' is updated.
+19:32:06 INFO  : Build configuration of 'display_demo_system' is updated to 'Release'
+19:32:06 INFO  : Build configuration of system project is automatically updated to 'Release'.
+19:32:14 INFO  : Result from executing command 'getProjects': top
+19:32:14 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202220_1|D:/AMD/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|D:/AMD/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|D:/AMD/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|D:/AMD/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|D:/AMD/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|D:/AMD/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+19:32:15 INFO  : Checking for BSP changes to sync application flags for project 'display_demo'...
+19:32:20 INFO  : Build configuration of 'display_demo_system' is updated to 'Debug'
+19:32:20 INFO  : Build configuration of system project is automatically updated to 'Debug'.
+19:32:28 INFO  : Disconnected from the channel tcfchan#4.
+19:32:35 INFO  : The hardware specification used by project 'display_demo' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+19:32:35 INFO  : The file 'D:\Projects\prj\AMD\image_processing\workspace\display_demo\_ide\bitstream\top.bit' stored in project is removed.
+19:32:35 INFO  : The updated bitstream files are copied from platform to folder 'D:\Projects\prj\AMD\image_processing\workspace\display_demo\_ide\bitstream' in project 'display_demo'.
+19:32:35 INFO  : The file 'D:\Projects\prj\AMD\image_processing\workspace\display_demo\_ide\psinit\ps7_init.tcl' stored in project is removed.
+19:32:38 INFO  : The updated ps init files are copied from platform to folder 'D:\Projects\prj\AMD\image_processing\workspace\display_demo\_ide\psinit' in project 'display_demo'.
+19:32:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:32:38 INFO  : Jtag cable 'Digilent JTAG-SMT3 210357A7D00EA' is selected.
+19:32:38 INFO  : 'jtag frequency' command is executed.
+19:32:38 INFO  : Context for 'APU' is selected.
+19:32:38 INFO  : System reset is completed.
+19:32:41 INFO  : 'after 3000' command is executed.
+19:32:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}' command is executed.
+19:32:44 INFO  : Device configured successfully with "D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit"
+19:32:44 INFO  : Context for 'APU' is selected.
+19:32:44 INFO  : Hardware design and registers information is loaded from 'D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa'.
+19:32:44 INFO  : 'configparams force-mem-access 1' command is executed.
+19:32:44 INFO  : Context for 'APU' is selected.
+19:32:44 INFO  : Sourcing of 'D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl' is done.
+19:32:44 INFO  : 'ps7_init' command is executed.
+19:32:44 INFO  : 'ps7_post_config' command is executed.
+19:32:44 INFO  : 'configparams force-mem-access 0' command is executed.
+19:32:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}
+fpga -file D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:32:44 INFO  : Launch script is exported to file 'D:\Projects\prj\AMD\image_processing\workspace\display_demo_system\_ide\scripts\debugger_display_demo-default.tcl'
+19:32:57 INFO  : Build configuration of 'display_demo_system' is updated to 'Release'
+19:32:57 INFO  : Build configuration of system project is automatically updated to 'Release'.
+19:32:58 INFO  : Disconnected from the channel tcfchan#6.
+19:32:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:33:00 INFO  : Jtag cable 'Digilent JTAG-SMT3 210357A7D00EA' is selected.
+19:33:00 ERROR : port closed
+19:33:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+19:33:00 ERROR : port closed
+19:33:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:33:03 INFO  : Jtag cable 'Digilent JTAG-SMT3 210357A7D00EA' is selected.
+19:33:03 INFO  : 'jtag frequency' command is executed.
+19:33:03 INFO  : Context for 'APU' is selected.
+19:33:03 INFO  : System reset is completed.
+19:33:07 INFO  : 'after 3000' command is executed.
+19:33:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}' command is executed.
+19:33:09 INFO  : Device configured successfully with "D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit"
+19:33:09 INFO  : Context for 'APU' is selected.
+19:33:09 INFO  : Hardware design and registers information is loaded from 'D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa'.
+19:33:09 INFO  : 'configparams force-mem-access 1' command is executed.
+19:33:09 INFO  : Context for 'APU' is selected.
+19:33:09 INFO  : Sourcing of 'D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl' is done.
+19:33:09 INFO  : 'ps7_init' command is executed.
+19:33:09 INFO  : 'ps7_post_config' command is executed.
+19:33:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:33:11 INFO  : The application 'D:/Projects/prj/AMD/image_processing/workspace/display_demo/Release/display_demo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:33:11 INFO  : 'configparams force-mem-access 0' command is executed.
+19:33:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT3-210357A7D00EA-23727093-0"}
+fpga -file D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/prj/AMD/image_processing/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/prj/AMD/image_processing/workspace/display_demo/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/prj/AMD/image_processing/workspace/display_demo/Release/display_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:33:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:33:11 INFO  : 'con' command is executed.
+19:33:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:33:11 INFO  : Launch script is exported to file 'D:\Projects\prj\AMD\image_processing\workspace\display_demo_system\_ide\scripts\debugger_display_demo-default_1.tcl'
+20:10:36 INFO  : Disconnected from the channel tcfchan#7.

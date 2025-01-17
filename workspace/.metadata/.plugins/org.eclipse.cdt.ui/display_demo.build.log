@@ -1,10 +1,25 @@
-19:27:27 **** Incremental Build of configuration Debug for project display_demo ****
+19:32:16 **** Build of configuration Release for project display_demo ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/main.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/Projects/prj/AMD/image_processing/workspace/top/export/top/sw/top/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+'Finished building: ../src/main.cpp'
+' '
+'Building target: display_demo.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/Projects/prj/AMD/image_processing/workspace/top/export/top/sw/top/standalone_ps7_cortexa9_0/bsplib/lib -o "display_demo.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: display_demo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size display_demo.elf  |tee "display_demo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31760	 923784	  22640	 978184	  eed08	display_demo.elf
+'Finished building: display_demo.elf.size'
+' '
 
-19:27:27 Build Finished (took 184ms)
+19:32:18 Build Finished (took 1s.813ms)
 

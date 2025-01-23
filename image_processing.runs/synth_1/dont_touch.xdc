@@ -9,11 +9,17 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_bd || O
 # IP: bd/top_bd/ip/top_bd_processing_system7_0_0/top_bd_processing_system7_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_bd_processing_system7_0_0 || ORIG_REF_NAME==top_bd_processing_system7_0_0} -quiet] -quiet
 
+# IP: bd/top_bd/ip/top_bd_auto_pc_0/top_bd_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_bd_auto_pc_0 || ORIG_REF_NAME==top_bd_auto_pc_0} -quiet] -quiet
+
 # IP: bd/top_bd/ip/top_bd_ps7_0_axi_periph_0/top_bd_ps7_0_axi_periph_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_bd_ps7_0_axi_periph_0 || ORIG_REF_NAME==top_bd_ps7_0_axi_periph_0} -quiet] -quiet
 
 # IP: bd/top_bd/ip/top_bd_rst_ps7_0_100M_0/top_bd_rst_ps7_0_100M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_bd_rst_ps7_0_100M_0 || ORIG_REF_NAME==top_bd_rst_ps7_0_100M_0} -quiet] -quiet
+
+# IP: bd/top_bd/ip/top_bd_auto_pc_1/top_bd_auto_pc_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_bd_auto_pc_1 || ORIG_REF_NAME==top_bd_auto_pc_1} -quiet] -quiet
 
 # IP: bd/top_bd/ip/top_bd_axi_mem_intercon_0/top_bd_axi_mem_intercon_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_bd_axi_mem_intercon_0 || ORIG_REF_NAME==top_bd_axi_mem_intercon_0} -quiet] -quiet
@@ -45,10 +51,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_bd_vio_
 # IP: bd/top_bd/ip/top_bd_image_process_0_0/top_bd_image_process_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_bd_image_process_0_0 || ORIG_REF_NAME==top_bd_image_process_0_0} -quiet] -quiet
 
-# IP: bd/top_bd/ip/top_bd_auto_pc_0/top_bd_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_bd_auto_pc_0 || ORIG_REF_NAME==top_bd_auto_pc_0} -quiet] -quiet
-
-# IP: bd/top_bd/ip/top_bd_auto_pc_1/top_bd_auto_pc_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_bd_auto_pc_1 || ORIG_REF_NAME==top_bd_auto_pc_1} -quiet] -quiet
-
-# XDC: d:/Projects/prj/AMD/image_processing/image_processing.gen/sources_1/bd/top_bd/top_bd_ooc.xdc
+# XDC: /home/hydrangea/project/AMD/zynq_image_processing/image_processing.gen/sources_1/bd/top_bd/top_bd_ooc.xdc

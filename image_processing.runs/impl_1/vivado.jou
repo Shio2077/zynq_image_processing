@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
-# Vivado v2022.2.2 (64-bit)
-# SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
-# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
-# Start of session at: Fri Jan 17 19:23:12 2025
-# Process ID: 20560
-# Current directory: D:/Projects/prj/AMD/image_processing/image_processing.runs/impl_1
-# Command line: vivado.exe -log top_bd_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_bd_wrapper.tcl -notrace
-# Log file: D:/Projects/prj/AMD/image_processing/image_processing.runs/impl_1/top_bd_wrapper.vdi
-# Journal file: D:/Projects/prj/AMD/image_processing/image_processing.runs/impl_1\vivado.jou
-# Running On: C88, OS: Windows, CPU Frequency: 3793 MHz, CPU Physical cores: 16, Host memory: 33618 MB
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu Jan 23 17:42:08 2025
+# Process ID: 31030
+# Current directory: /home/hydrangea/project/AMD/zynq_image_processing/image_processing.runs/impl_1
+# Command line: vivado -log top_bd_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_bd_wrapper.tcl -notrace
+# Log file: /home/hydrangea/project/AMD/zynq_image_processing/image_processing.runs/impl_1/top_bd_wrapper.vdi
+# Journal file: /home/hydrangea/project/AMD/zynq_image_processing/image_processing.runs/impl_1/vivado.jou
+# Running On: C58, OS: Linux, CPU Frequency: 3333.579 MHz, CPU Physical cores: 16, Host memory: 67080 MB
 #-----------------------------------------------------------
 source top_bd_wrapper.tcl -notrace

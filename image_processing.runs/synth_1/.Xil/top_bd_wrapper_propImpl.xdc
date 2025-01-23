@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/Projects/prj/AMD/image_processing/image_processing.srcs/constrs_1/new/pin.xdc rfile:../../../image_processing.srcs/constrs_1/new/pin.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/hydrangea/project/AMD/zynq_image_processing/image_processing.srcs/constrs_1/new/pin.xdc rfile:../../../image_processing.srcs/constrs_1/new/pin.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:73 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN N22 [get_ports TMDS_0_tmds_clk_p]
 set_property src_info {type:XDC file:1 line:75 export:INPUT save:INPUT read:READ} [current_design]

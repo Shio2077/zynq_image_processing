@@ -1,8 +1,8 @@
-Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2022.2.2 (win64) Build 3788238 Tue Feb 21 20:00:34 MST 2023
-| Date             : Fri Jan 17 19:25:31 2025
-| Host             : C88 running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date             : Thu Jan 23 17:44:54 2025
+| Host             : C58 running 64-bit Ubuntu 22.04.5 LTS
 | Command          : report_power -file top_bd_wrapper_power_routed.rpt -pb top_bd_wrapper_power_summary_routed.pb -rpx top_bd_wrapper_power_routed.rpx
 | Design           : top_bd_wrapper
 | Device           : xc7z020clg484-1
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.687        |
+| Total On-Chip Power (W)  | 1.688        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 1.546        |
@@ -61,13 +61,13 @@ Table of Contents
 |   LUT as Distributed RAM |    <0.001 |       26 |     17400 |            0.15 |
 |   F7/F8 Muxes            |    <0.001 |       12 |     53200 |            0.02 |
 |   Others                 |     0.000 |      872 |       --- |             --- |
-| Signals                  |     0.006 |    10454 |       --- |             --- |
+| Signals                  |     0.006 |    10452 |       --- |             --- |
 | Block RAM                |     0.012 |     18.5 |       140 |           13.21 |
 | MMCM                     |     0.096 |        1 |         4 |           25.00 |
 | I/O                      |     0.131 |        8 |       200 |            4.00 |
 | PS7                      |     1.268 |        1 |       --- |             --- |
 | Static Power             |     0.141 |          |           |                 |
-| Total                    |     1.687 |          |           |                 |
+| Total                    |     1.688 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.066 |       0.050 |      0.016 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.066 |       0.051 |      0.016 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.068 |       0.053 |      0.015 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.041 |       0.040 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -161,7 +161,7 @@ Table of Contents
 |   dbg_hub                |     0.003 |
 |     inst                 |     0.003 |
 |       BSCANID.u_xsdbm_id |     0.003 |
-|   top_bd_i               |     1.515 |
+|   top_bd_i               |     1.516 |
 |     DVI_Transmitter_0    |     0.132 |
 |       inst               |     0.132 |
 |     axi_vdma_0           |     0.010 |
@@ -170,8 +170,8 @@ Table of Contents
 |       inst               |     0.096 |
 |     processing_system7_0 |     1.269 |
 |       inst               |     1.269 |
-|     ps7_0_axi_periph     |     0.003 |
-|       s00_couplers       |     0.003 |
+|     ps7_0_axi_periph     |     0.004 |
+|       s00_couplers       |     0.004 |
 |     v_axi4s_vid_out_0    |     0.002 |
 |       inst               |     0.002 |
 |     vio_0                |     0.002 |
